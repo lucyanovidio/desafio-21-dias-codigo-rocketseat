@@ -1,9 +1,9 @@
 # Desafio de 21 dias de código
 ### Desafio por Rocketseat 🚀
 
-> ### Parte 1
+#### Dias:
 
-Dias:
+> #### Parte 1
 
 + #1 - Criar um repositório no Github para por os 21 desafios de cada dia;
 + #2 - Hello World costumizado com fonte, cor e imagens;
