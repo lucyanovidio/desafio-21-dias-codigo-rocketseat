@@ -6,7 +6,7 @@
 > #### Parte 1
 
 + #1 - Criar um repositório no Github para por os 21 desafios de cada dia;
-+ #2 - Hello World costumizado com fonte, cor e imagens;
++ #2 - Hello World customizado com fonte, cor e imagens;
 + #3 - Botão animado;
 + #4 - Calculadora;
 + #5 - Página de erro 404;
