@@ -5,9 +5,9 @@
 
 > #### Parte 1
 
-+ #1 - Criar um repositório no Github para por os 21 desafios de cada dia;
-+ #2 - Hello World customizado com fonte, cor e imagens;
-+ #3 - Botão animado;
++ #1 - Criar um repositório no Github para por os 21 desafios de cada dia; <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-1">FEITO</a>
++ #2 - Hello World customizado com fonte, cor e imagens; <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-2">FEITO</a>
++ #3 - Botão animado; <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-3">FEITO</a>
 + #4 - Calculadora;
 + #5 - Página de erro 404;
 + #6 - Criar um card com o efeito Glassmorfism;
