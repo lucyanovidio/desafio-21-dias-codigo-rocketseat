@@ -1,0 +1,97 @@
+/* uma duvidazinha: eu posso fazer um elemento andar pro lado com o translate e tbm adicionando margin, por exemplo. Quando esses elementos que podem ser usados pras mesmas coisas se diferenciam no uso? */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  background-color: #e2e2e2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: 80px;
+  height: 80px;
+  padding: 15px;
+
+  position: relative;
+
+  border: none;
+  border-radius: 50%;
+
+  box-shadow: 0 0 1em black;
+
+  background-color: blueviolet;
+  animation: button 1s infinite;
+
+  transition: 400ms;
+}
+
+button svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes button {
+  0% {
+    top: -25px;
+  }
+
+  50% {
+    top: 25px;
+  }
+
+  100% {
+    top: -25px;
+  }
+}
+
+button:hover {
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+}
+
+footer {
+  position: fixed;
+  bottom: 100px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: black;
+  opacity: 0.4;
+
+  transition: 400ms;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+footer:hover {
+  opacity: 1;
+}
+
+body.rocket {
+  background-image: url(https://stories.cnnbrasil.com.br/wp-content/uploads/sites/9/2021/06/giphy-54.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body.rocket button {
+  opacity: 0;
+}
+
+body.rocket footer {
+  opacity: 0;
+}
