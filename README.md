@@ -9,7 +9,7 @@
 + #2 - Hello World customizado com fonte, cor e imagens;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-2" target="_blank">FEITO</a>
 + #3 - Botão animado;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-3" target="_blank">FEITO</a>
 + #4 - Calculadora;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-4" target="_blank">FEITO</a>
-+ #5 - Página de erro 404;
++ #5 - Página de erro 404;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-5" target="_blank">FEITO</a>
 + #6 - Criar um card com o efeito Glassmorfism;
 + #7 - Desenvolver um contador.
 
