@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgb(233, 233, 233);
+
+  font-family: 'Cabin', sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 70px;
+}
+
+main {
+  /* depois fazer o esquema de responsividade */
+  width: 600px;
+  height: 450px;
+
+  text-align: center;
+
+  position: relative;
+}
+
+.error {
+  height: 242px;
+  border-bottom: 2px solid grey;
+}
+
+.error h2 {
+  height: 100%;
+  margin-left: 40px;
+  text-align: left;
+
+  font-size: 235px;
+  font-weight: bold;
+  color: #d4d4d4;
+  letter-spacing: -15px;
+
+  border: none;
+  opacity: .8;
+
+  transition: 300ms;
+}
+
+.error h2:hover {
+  color: yellow;
+}
+
+.error img {
+  position: absolute;
+  right: 33px;
+  top: 7px;
+
+  opacity: .9;
+
+  width: 170px;
+}
+
+h1 {
+  font-size: 40px;
+  letter-spacing: -2px;
+
+  margin: 20px 0 30px;
+}
+
+p {
+  width: 70%;
+  margin: 0 auto;
+
+  font-size: 18px;
+  opacity: .6;
+}
+
+button {
+  font-size: 15px;
+  color: #ffff00;
+  filter: brightness(.9);
+  opacity: .8;
+
+  background-color: #161c25;
+  border: none;
+  border-radius: 5px;
+
+  margin-top: 30px;
+  padding: 8px 15px;
+
+  transition: 300ms;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #000000;
+}
+
+footer {
+  font-size: 14px;
+  color: grey;
+
+  opacity: .7;
+  transition: 300ms;
+}
+
+footer a {
+  text-decoration: none;
+  color: grey;
+}
+
+footer:hover {
+  opacity: 1;
+}
