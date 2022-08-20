@@ -7,10 +7,12 @@
 body {
   width: 100vw;
   height: 100vh;
-
-  background-color: rgb(233, 233, 233);
-
+  
   font-family: 'Cabin', sans-serif;
+
+  background-image: url(./assets/homer-bg-2.png);
+  background-size: cover;
+  background-position-x: -120px;
 
   display: flex;
   justify-content: center;
@@ -40,25 +42,18 @@ main {
 
   font-size: 235px;
   font-weight: bold;
-  color: #d4d4d4;
+  color: grey;
   letter-spacing: -15px;
 
   border: none;
-  opacity: .8;
 
   transition: 300ms;
-}
-
-.error h2:hover {
-  color: yellow;
 }
 
 .error img {
   position: absolute;
   right: 33px;
   top: 7px;
-
-  opacity: .9;
 
   width: 170px;
 }
@@ -101,7 +96,7 @@ button:hover {
 
 footer {
   font-size: 14px;
-  color: grey;
+  color: black;
 
   opacity: .7;
   transition: 300ms;
@@ -109,9 +104,9 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: grey;
+  color: black;
 }
 
 footer:hover {
-  opacity: 1;
+  cursor: pointer;
 }
