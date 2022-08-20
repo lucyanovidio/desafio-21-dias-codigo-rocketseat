@@ -67,14 +67,15 @@ h1 {
 
 p {
   width: 70%;
-  margin: 0 auto;
+  margin: 0 auto 37px;
 
   font-size: 18px;
   opacity: .6;
 }
 
-button {
-  font-size: 15px;
+main a {
+  text-decoration: none;
+  font-size: 16px;
   color: #ffff00;
   filter: brightness(.9);
   opacity: .8;
@@ -83,13 +84,12 @@ button {
   border: none;
   border-radius: 5px;
 
-  margin-top: 30px;
   padding: 8px 15px;
 
   transition: 300ms;
 }
 
-button:hover {
+main a:hover {
   cursor: pointer;
   background-color: #000000;
 }
