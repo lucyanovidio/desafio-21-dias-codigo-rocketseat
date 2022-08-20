@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Desafio 4</title>
+
+  <link rel="stylesheet" href="./style.css" />
+  <script type="text/javascript" src="./main.js" defer></script>
+</head>
+<body>
+  <div class="calculator">
+    <h2>CALCULADORA</h2>
+    <p id="resoult"></p>
+
+    <table>
+      <tr>
+        <td><button onclick="clean()">C</button></td>
+        <td><button onclick="back()"><</button></td>
+        <td><button onclick="insert('/')">/</button></td>
+        <td><button onclick="insert('*')">x</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="insert('7')">7</button></td>
+        <td><button onclick="insert('8')">8</button></td>
+        <td><button onclick="insert('9')">9</button></td>
+        <td><button onclick="insert('-')">-</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="insert('4')">4</button></td>
+        <td><button onclick="insert('5')">5</button></td>
+        <td><button onclick="insert('6')">6</button></td>
+        <td><button onclick="insert('+')">+</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="insert('1')">1</button></td>
+        <td><button onclick="insert('2')">2</button></td>
+        <td><button onclick="insert('3')">3</button></td>
+        <td rowspan="2"><button style="height: 105px;" onclick="calculate()">=</button></td>
+      </tr>
+      <tr>
+        <td colspan="2"><button style="width: 105px;" onclick="insert()">0</button></td>
+        <td><button onclick="insert('.')">.</button></td>
+      </tr>
+    </table>
+  </div>
+
+  <footer>Powered by <a href="https://github.com/lucyanovidio"><b>Lucyan Ovídio</b></a>.</footer>
+</body>
+</html>

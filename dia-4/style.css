@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #e2e2e2;
+
+  font-family: 'Open Sans', sans-serif;
+  color: white; 
+
+  /* Pra centralizar a calculadora, mas agt fez de forma diferente
+
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.calculator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* pq o top e o left 50% fazem a ponto superior esquerda da caixa calculator ficar no centro, daí agt volta 50% da caixa pra esquerda e pra cima pro meio da caixa ficar no centro. É uma forma de fazer além da que já sei com o flex */
+
+  background-color: rgba(0, 0, 0, .8);
+  /* btamos o alfa pra ficar transparente o fundo */
+  border-radius: 15px;
+
+  padding: 15px;
+  text-align: center;
+}
+
+#resoult {
+  width: 217px;
+  height: 40px;
+
+  margin: 8px auto;
+  padding: 5px;
+
+  background-color: white;
+
+  font-size: 25px;
+  color: #000;
+  text-align: right;
+}
+
+/* td {
+  width: 100%;
+  height: 100%;
+} */
+
+button {
+  /* width: 100%;
+  height: 100%; */
+  width: 50px;
+  height: 50px;
+
+  font-size: 25px;
+  color: white;
+
+  background-color: #1f1f1f;
+  border: none;
+
+  margin: 2px;
+}
+
+button:hover {
+  background-color: blueviolet;
+  cursor: pointer;
+}
+
+footer {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 12px;
+  color: grey;
+
+  opacity: .7;
+  transition: 300ms;
+}
+
+footer a {
+  text-decoration: none;
+  color: grey;
+}
+
+footer:hover {
+  opacity: 1;
+}
