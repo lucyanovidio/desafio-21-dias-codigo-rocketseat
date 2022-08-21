@@ -1,0 +1,99 @@
+/* faltou ter certeza q toda vez q der reload realmente vai mudar o bg. Talvez fazer uma function de js pra isso */
+
+
+/* == GLOBAL == */
+:root {
+  font-size: 62.5%;
+}
+
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  
+  background-image: url(https://source.unsplash.com/random);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* == CARD == */
+.card {
+  width: 80%;
+  max-width: 40rem;
+  height: 40rem;
+
+  padding: 5rem;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+
+  border: .1rem solid rgba(167, 167, 167, .2);
+  border-radius: 5rem;
+
+  /* == EFEITO GLASSMORPHISM == */
+  background-color: transparent;
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+}
+
+/* só n consegui que o h1 ficasse legal em dimensões mobile :/ */
+.card h1 {
+  font-size: 4rem;
+  line-height: 3.5rem;
+
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.card p {
+  font-size: 1.4rem;
+  font-family: 'Lora', serif;
+
+  margin-left: 2rem;
+}
+
+p span {
+  text-decoration: underline;
+}
+
+/* == FOOTER == */
+.card + p {
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+}
+
+p a {
+  color: white;
+}
