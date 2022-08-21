@@ -8,109 +8,108 @@ body {
   width: 100vw;
   height: 100vh;
   
-  font-family: 'Cabin', sans-serif;
-
-  background-image: url(./assets/homer-bg-2.png);
-  background-size: cover;
-  background-position-x: -120px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 70px;
+
+  background: white;
+
+  font-family: 'Open Sans', sans-serif;
 }
 
-main {
-  width: 600px;
-  height: 450px;
-
-  text-align: center;
-
+.container {
   position: relative;
-}
+  width: 100vw;
 
-.error {
-  height: 242px;
-  border-bottom: 2px solid grey;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.error h2 {
-  height: 100%;
-  margin-left: 40px;
-  text-align: left;
-
-  font-size: 235px;
-  font-weight: bold;
-  color: grey;
-  letter-spacing: -15px;
-
-  border: none;
-
-  transition: 300ms;
-}
-
-.error h2:hover {
-  color: yellow;
-}
-
-.error img {
-  position: absolute;
-  right: 33px;
-  top: 7px;
-
-  width: 170px;
-}
-
-h1 {
-  font-size: 40px;
-  letter-spacing: -2px;
-
-  margin: 20px 0 30px;
-}
-
-p {
-  width: 70%;
-  margin: 0 auto;
-
-  font-size: 18px;
-  opacity: .6;
+  margin-bottom: 50px;
 }
 
 button {
-  font-size: 15px;
-  color: #ffff00;
-  filter: brightness(.9);
-  opacity: .8;
-
-  background-color: #161c25;
+  width: 100px;
+  height: 100px;
+  
   border: none;
-  border-radius: 5px;
+  border-radius: 50%;
 
-  margin-top: 30px;
-  padding: 8px 15px;
+  background-color: grey;
+  animation: main 4s infinite;
+  
+  font-size: 50px;
+  
+  transition: 500ms;
+}
 
-  transition: 300ms;
+@keyframes main {
+  50% {
+    top: 0px;
+    left: 0px;
+    background: violet;
+  }
+  25% {
+    top: 0px;
+    left: 0px;
+    background: white;
+  }
+  25% {
+    top: 0px;
+    left: 0px;
+    background: #2e2ed6;
+  }
 }
 
 button:hover {
+  width: 110px;
+  height: 110px;
+
+  font-size: 55px;
+
   cursor: pointer;
-  background-color: #000000;
 }
 
-footer {
+h1 {
+  position: absolute;
+  right: 0;
+
+  font-size: 100px;
+
+  transform: translateX(100%);
+  transition: 500ms;
+}
+
+p {
   font-size: 14px;
-  color: black;
+  color: grey;
+  opacity: 0.6;
 
-  opacity: .7;
-  transition: 300ms;
+  transition: 400ms;
 }
 
-footer a {
+a {
   text-decoration: none;
-  color: black;
+  color: grey;
 }
 
-footer:hover {
-  cursor: pointer;
+body p:hover {
+  opacity: 1;
 }
+
+body.hello-world button {
+  width: 0;
+  height: 0;
+  font-size: 0;
+}
+
+body.hello-world h1 {
+  right: auto;
+  transform: translateX(0);
+}
+
+body.hello-world p {
+  margin-top: 50px;
+}
+
