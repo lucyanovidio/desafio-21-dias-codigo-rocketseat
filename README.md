@@ -13,4 +13,14 @@
 + #6 - Criar um card com o efeito Glassmorphism;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-6" target="_blank">FEITO</a> ✔️
 + #7 - Desenvolver um contador.  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-7" target="_blank">FEITO</a> ✔️
 
+> #### Parte 2
+
++ #8 - Desenvolva um toggle que altere o tema para claro e escuro;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-8" target="_blank">FEITO</a> ✔️
++ #9 - Crie uma animação de loading;
++ #10 - Utilize a lib Particle.js do JavaScript;
++ #11 - Crie o layout de um formulário de login;
++ #12 - Desenvolva uma galeria de imagens;
++ #13 - Desenvolva um menu responsivo;
++ #14 - Crie um formulário de quizzes;
+
 #21diasdecodigo #rocketseat #soumarmiteiro
