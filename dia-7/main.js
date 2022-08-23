@@ -1,8 +1,3 @@
-// será q rola um temporizador tbm, tipo eui boto o tempo, e ele vai até o tempo q eu quero e toca o alarme?
-
-// falta limitar o counter pra ele n ficar negativo
-// falta tbm qnd ele chega nos 60min ele segue pra 61,62.. e como eu n setei hora, queria que ele parasse no 59:59
-
 const inc$ = document.querySelector('#inc')
 const dec$ = document.querySelector('#dec')
 const zero$ = document.querySelector('#zero')
@@ -23,7 +18,6 @@ function twoDigits(digit) {
   }
 }
 
-// isso é um alternativo pro "onclick"
 start$.addEventListener("click", function () {
   counter()
   interval = setInterval(counter, 1000)
@@ -47,7 +41,6 @@ zero$.addEventListener("click", function () {
   sec = 0
   min = 0
   text$.innerHTML = "00:00"
-  // text$.innerHTML = min + ":" + sec
   clearInterval(interval)
   start$.innerHTML = "Iniciar"
 })
