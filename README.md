@@ -16,7 +16,7 @@
 > #### Parte 2
 
 + #8 - Desenvolva um toggle que altere o tema para claro e escuro;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-8">FEITO</a> ✔️
-+ #9 - Crie uma animação de loading;
++ #9 - Crie uma animação de loading;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-9">FEITO</a> ✔️
 + #10 - Utilize a lib Particle.js do JavaScript;
 + #11 - Crie o layout de um formulário de login;
 + #12 - Desenvolva uma galeria de imagens;
