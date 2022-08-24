@@ -1,5 +1,3 @@
-/* E SE EU FIZER UMA JANELA QUE FICA DE DIA E QND MUDA FICA DE NOITE? E O QUARTO DE LUZ APAGADA/ACESSA */
-
 /* == GLOBAL == */
 
 :root {
@@ -16,7 +14,7 @@ body {
   width: 100vw;
   height: 100vh;
 
-  background-color: white;
+  background-color: #f0f0f0;
 
   display: flex;
   flex-direction: column;
