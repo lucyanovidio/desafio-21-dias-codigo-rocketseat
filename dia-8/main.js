@@ -1,13 +1,11 @@
-const btn$ = document.querySelector('.theme-btn')
+const btn$ = document.querySelector('#btn')
 const span$ = document.querySelector('h1 span')
 
-btn$.addEventListener("click", function() {
+btn$.addEventListener("change", (e) => {
+  document.body.classList.toggle("dark-mode"), e.target.checked
   if(document.body.classList == "") {
-    document.body.classList.add('dark-mode')
-    span$.innerHTML = "light mode"
-  } else {
-    document.body.classList.remove('dark-mode')
     span$.innerHTML = "dark mode"
+  } else {
+    span$.innerHTML = "light mode"
   }
 })
-
