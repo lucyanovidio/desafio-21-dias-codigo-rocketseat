@@ -1,5 +1,5 @@
 # Desafio do dia #10
 
-+ Crie uma animação de loading. ✔️
++ Utilize a lib Particle.js do JavaScript. ✔️
 
 #21diasdecodigo #rocketseat #soumarmiteiro
