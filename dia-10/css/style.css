@@ -1,0 +1,208 @@
+/* == GLOBAL == */
+
+:root {
+  font-size: 62.5%;
+}
+
+/* isso aqui no *, no body e no background de reset, o cara disse que costuma ser feito num arquivo "reset.css" nos projetos web. Procurar saber disso, se é assim, e como é sobre isso de fazer vários arquivos em pastas separados */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #000;
+
+  font-size: 1rem;
+}
+
+/* == ASTRONAUT ANIMATED == */
+
+/* ele tem q ficar em cima do particles */
+img {
+  position: absolute;
+  z-index: 100;
+
+  width: 30rem;
+  animation: astronaut 120s infinite;
+}
+
+/* tem q fazer o responsivo */
+@keyframes astronaut {
+  0% {
+    left: 5rem;
+    top: 30rem;
+    width: 15rem;
+    transform: rotate(0);
+  }
+
+  25% {
+    left: 90rem;
+    top: 5rem;
+    width: 10rem;
+    transform: rotate(180deg);
+  }
+
+  50% {
+    left: 100rem;
+    top: 35rem;
+    width: 25rem;
+    transform: rotate(90deg);
+  }
+
+  75% {
+    left: 50rem;
+    top: 15rem;
+    width: 40rem;
+    transform: rotate(270deg);
+  }
+
+  100% {
+    left: 5rem;
+    top: 30rem;
+    width: 15rem;
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 400px) {
+  @keyframes astronaut {
+    0% {
+      left: 1rem;
+      top: 20rem;
+      width: 10rem;
+      transform: rotate(0);
+    }
+  
+    25% {
+      left: 25rem;
+      top: 5rem;
+      width: 5rem;
+      transform: rotate(180deg);
+    }
+  
+    50% {
+      left: 10rem;
+      top: 30rem;
+      width: 15rem;
+      transform: rotate(90deg);
+    }
+  
+    75% {
+      left: 5rem;
+      top: 20rem;
+      width: 20rem;
+      transform: rotate(270deg);
+    }
+  
+    100% {
+      left: 1rem;
+      top: 20rem;
+      width: 10rem;
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  @keyframes astronaut {
+    0% {
+      left: 5rem;
+      top: 20rem;
+      width: 15rem;
+      transform: rotate(0);
+    }
+  
+    25% {
+      left: 60rem;
+      top: 5rem;
+      width: 10rem;
+      transform: rotate(180deg);
+    }
+  
+    50% {
+      left: 50rem;
+      top: 30rem;
+      width: 15rem;
+      transform: rotate(90deg);
+    }
+  
+    75% {
+      left: 25rem;
+      top: 15rem;
+      width: 30rem;
+      transform: rotate(270deg);
+    }
+  
+    100% {
+      left: 5rem;
+      top: 20rem;
+      width: 15rem;
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* == PARTICLES == */
+
+/* ?? 
+" Por padrão, a biblioteca irá inserir no DOM um elemento <canvas> que contém a animação. Para que este novo elemento se comporte como um bloco, é necessário alterar a propriedade display para block ." */
+/* canvas{ 
+  display: block;
+} */
+
+/* #particles-container { */
+.background {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background: #000;
+  background-image: url("../assets/bg.jpg");
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: 50% 50%; 
+} 
+
+/* == FOOTER == */
+
+footer {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 1.4rem;
+  opacity: .6;
+  transition: 400ms;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  footer {
+    font-size: 1rem;
+  }
+}
