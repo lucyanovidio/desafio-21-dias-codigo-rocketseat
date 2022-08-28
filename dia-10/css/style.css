@@ -162,7 +162,8 @@ canvas {
   display: block;
 }
 
-div:nth-child(7) {
+div.count-particles,
+div:nth-child(8) {
   visibility: hidden;
 }
 
