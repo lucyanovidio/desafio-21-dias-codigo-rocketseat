@@ -4,8 +4,6 @@
   font-size: 62.5%;
 }
 
-/* isso aqui no *, no body e no background de reset, o cara disse que costuma ser feito num arquivo "reset.css" nos projetos web. Procurar saber disso, se é assim, e como é sobre isso de fazer vários arquivos em pastas separados */
-
 * {
   padding: 0;
   margin: 0;
@@ -31,7 +29,6 @@ body {
 
 /* == ASTRONAUT ANIMATED == */
 
-/* ele tem q ficar em cima do particles */
 img {
   position: absolute;
   z-index: 100;
@@ -40,7 +37,6 @@ img {
   animation: astronaut 120s infinite;
 }
 
-/* tem q fazer o responsivo */
 @keyframes astronaut {
   0% {
     left: 5rem;
@@ -154,12 +150,14 @@ img {
       transform: rotate(360deg);
     }
   }
+  
+  footer {
+    font-size: 1rem;
+  }
 }
 
 /* == PARTICLES == */
 
-/* ?? 
-" Por padrão, a biblioteca irá inserir no DOM um elemento <canvas> que contém a animação. Para que este novo elemento se comporte como um bloco, é necessário alterar a propriedade display para block ." */
 canvas {
   display: block;
 }
@@ -171,11 +169,13 @@ div:nth-child(7) {
 #particles-js {
   width: 100vw;
   height: 100vh;
-  position: absolute;
   display: block;
+  
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 0;
+  
   background: #000;
   background-image: url('../assets/bg.jpg');
   background-repeat: no-repeat;
@@ -203,10 +203,4 @@ footer a {
 
 footer:hover {
   opacity: 1;
-}
-
-@media (max-width: 768px) {
-  footer {
-    font-size: 1rem;
-  }
 }
