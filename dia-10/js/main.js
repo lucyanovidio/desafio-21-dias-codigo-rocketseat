@@ -1,18 +1,5 @@
 // https://vincentgarreau.com/particles.js/
 
-// Pgeamos essa função pra iniciar o particles na classe canvas.background lá da documentação, mas eu não sei bem como a glr costuma fazer qnd vai usar uma lib. Na real eu n sei de nd de js e uso de ferramentas, mas qnd eu chegar nessa etapa no explorer e com o conteúdo do discover pela biblioteca explorer, eu vou entender melhor,e ntão não surta. Tu ta no caminho
-
-// window.onload = function () {
-//   Particles.init({
-//     selector: '.background',
-//     maxParticles: 200,
-//     sizeVariations: 3,
-//     speed: 0.07,
-//     color: ['#fff'],
-//     minDistance: 80
-//   })
-// }
-
 particlesJS('particles-js', {
   particles: {
     number: { value: 120, density: { enable: true, value_area: 800 } },
@@ -78,18 +65,6 @@ particlesJS('particles-js', {
   },
   retina_detect: true
 })
-
-// tentei isso aqui pra aparecer as linhas e sumir td hr, mas n consegui
-
-// function lines() {
-//   particles.line_linked.color.enable = false
-
-//   setTimeout(function() {
-//     particles.line_linked.enable = true
-//   }, 1000)
-
-//   return lines()
-// }
 
 var count_particles, stats, update
 stats = new Stats()
