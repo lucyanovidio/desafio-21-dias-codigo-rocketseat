@@ -34,7 +34,7 @@ img {
   z-index: 100;
 
   width: 30rem;
-  animation: astronaut 10s infinite;
+  animation: astronaut 120s infinite;
 }
 
 /* RESPONSIVO */
