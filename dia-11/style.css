@@ -1,0 +1,237 @@
+/* == GLOBAL == */
+
+:root {
+  --gradient: linear-gradient(180deg, blueviolet 45%, rgb(11, 11, 141) 100%);
+  --gradient-2: linear-gradient(180deg, rgb(11, 11, 141) 45%, blueviolet 100%);
+  --primary-color: blueviolet;
+  --secundary-color: #dbdbdb;
+  --text-color: #fff;
+  --input-color: rgba(0, 0, 0, .8);
+  --font-family: 'Roboto', sans-serif;
+  font-size: 62.5%;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  background: var(--gradient);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* == LOG IN == */
+
+main {
+  width: 80%;
+  max-width: 60rem;
+  height: 35rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--secundary-color);
+  box-shadow: 0 0 4em #000;
+
+  display: grid;
+  grid-template-areas: 'A B';
+  grid-template-columns: 40% 60%;
+}
+
+main h1 {
+  grid-area: A;
+  height: 100%;
+
+  padding-inline: 4rem;
+
+  display: flex;
+  align-items: center;
+  background: var(--gradient-2);
+  
+  font-size: 3.5rem;
+  line-height: 3rem;
+  color: var(--text-color);
+}
+
+fieldset {
+  border: none;
+  /* height: 100%; */
+  padding: 3rem 5rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+fieldset div {
+  width: 100%;
+}
+
+fieldset .field {
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+
+  margin-bottom: 1rem;
+}
+
+fieldset .field label {
+  background: var(--input-color);
+  padding: .5rem;
+}
+
+fieldset .field input {
+  width: 100%;
+
+  background: none;
+  border: none;
+  border-bottom: .1rem solid var(--input-color);
+
+  padding-block: .8rem;
+
+  color: var(--input-color);
+}
+
+fieldset .field input::placeholder {
+  color: var(--input-color);
+}
+
+fieldset .field input:focus {
+  outline: none;
+  border-bottom: .2rem solid var(--input-color);
+}
+
+fieldset .login-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 1rem 0 2rem;
+  padding-inline: 1rem;
+}
+
+fieldset .login-buttons .checkbox-field {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+fieldset .login-buttons .checkbox-field label {
+  color: var(--input-color);
+  font-size: 1.1rem;
+}
+
+fieldset .login-buttons a {
+  color: var(--input-color);
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: 300ms;
+}
+
+fieldset .login-buttons a:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+fieldset input:nth-child(4) {
+  font-weight: bold;
+
+  padding: 1rem 2rem;
+  border: none;
+  background: var(--input-color);
+
+  transition: 300ms;
+}
+
+fieldset input:nth-child(4):hover {
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
+/* == FOOTER == */
+
+footer {
+  font-size: 1.2rem;
+
+  color: var(--text-color);
+  position: absolute;
+  bottom: 4rem;
+
+  opacity: .6;
+  transition: 400ms;
+}
+
+footer:hover {
+  opacity: 1;
+}
+
+/* == RESPONSIVO == */
+
+@media (max-width: 600px) {
+  body main {
+    max-width: 40rem;
+    height: 40rem;
+
+    grid-template-areas: 
+    'A' 
+    'B';
+    /* agr são duas linhas, com o msm tamanho */
+    grid-template-rows: 30% 70%;
+    /* e uma coluna só, pegando 100% de width */
+    grid-template-columns: 100%;
+  }
+
+  body main h1 {
+    font-size: 3rem;
+  }
+
+  body main fieldset {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  body main {
+    max-width: 40rem;
+    height: 35rem;
+
+    grid-template-areas: 
+    'A' 
+    'B';
+    /* agr são duas linhas, com o msm tamanho */
+    grid-template-rows: 30% 70%;
+    /* e uma coluna só, pegando 100% de width */
+    grid-template-columns: 100%;
+  }
+
+  body main h1 {
+    font-size: 2.5rem;
+  }
+
+  body main fieldset {
+    padding-top: 0;
+    padding-inline: 3rem;
+  }
+}
