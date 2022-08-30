@@ -1,5 +1,5 @@
 # Desafio do dia #12
 
-+ Desenvolva uma galeria de imagens. ✔️
++ Desenvolva uma galeria de imagens.  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-12">FEITO</a> ✔️
 
 #21diasdecodigo #rocketseat #soumarmiteiro
