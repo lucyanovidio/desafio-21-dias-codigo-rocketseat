@@ -98,6 +98,7 @@ img:hover {
 
 .full-screen-img-container .container-2 {
   width: 100%;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -106,6 +107,7 @@ img:hover {
 
 .full-screen-img-container .container-2 img {
   width: 100%;
+  height: 100%;
 }
 
 .full-screen-img-container .container-2 img:hover {
