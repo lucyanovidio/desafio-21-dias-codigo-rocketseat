@@ -19,7 +19,7 @@
 + #9 - Crie uma animação de loading;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-9">FEITO</a> ✔️
 + #10 - Utilize a lib Particle.js do JavaScript;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-10">FEITO</a> ✔️
 + #11 - Crie o layout de um formulário de login;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-11">FEITO</a> ✔️
-+ #12 - Desenvolva uma galeria de imagens;
++ #12 - Desenvolva uma galeria de imagens;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-12">FEITO</a> ✔️
 + #13 - Desenvolva um menu responsivo;
 + #14 - Crie um formulário de quizzes;
 
