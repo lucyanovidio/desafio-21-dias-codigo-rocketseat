@@ -28,14 +28,6 @@ body {
   color: #fff;
 }
 
-/* tirar */
-/* == HEADER == */
-
-/* header {
-  width: 100%;
-  height: fit-content;
-} */
-
 h1 {
   text-transform: uppercase;
   letter-spacing: .5rem;
@@ -44,23 +36,6 @@ h1 {
   margin: 3rem 4rem 5rem;
   padding-inline: 2rem;
 }
-/* 
-header input {
-  width: 80%;
-  max-width: 70rem;
-  padding: 1.5rem;
-  margin-block: 3rem;
-
-  border-radius: .8rem;
-  border: none;
-
-  font-size: 1.4rem;
-}
-
-h3 {
-  font-size: 1.6rem;
-  display: none;
-} */
 
 /* == GALLERY == */
 
@@ -79,6 +54,8 @@ h3 {
 
 img {
   width: 100%;
+  height: 20rem;
+  object-fit: cover;
   transition: 300ms;
 }
 
@@ -90,7 +67,6 @@ img:hover {
 /* == FULL SCREEN IMG == */
 
 .full-screen-img-container {
-  /* opacity fala só do q agt ta vendo, o visual. Visibility fala da parada estar ali. Por exemplo, se eu n coloco o visibility hidden aqui, fica como se a img estivesse por cima de tudo e eu n consigo clicar nas coisas, e posso acabar clicando num botão desses que tem dentro dessa caxa de full screen, tlgd? */
   opacity: 0;
   visibility: hidden;
 
@@ -194,8 +170,6 @@ footer:hover {
   .imgs-container {
     grid-template-columns: repeat(2, 1fr);
   }
-  /* == FULL SCREEN IMG == */
-
   /* == FOOTER == */
   footer {
     font-size: 1.2rem;
