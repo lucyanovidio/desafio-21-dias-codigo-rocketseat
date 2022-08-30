@@ -87,6 +87,8 @@ img:hover {
 .full-screen-img-container .container-1 {
   width: 90%;
   max-width: 100rem;
+  height: 85%;
+  max-height: 80rem;
 
   display: flex;
   flex-direction: row;
@@ -107,7 +109,9 @@ img:hover {
 
 .full-screen-img-container .container-2 img {
   width: 100%;
-  height: 100%;
+  /* pq o button q divide a caixa com a img ta pegando 15% */
+  height: 85%;
+  object-fit: contain;
 }
 
 .full-screen-img-container .container-2 img:hover {
@@ -117,11 +121,11 @@ img:hover {
 
 .full-screen-img-container button {
   width: 10%;
-  height: 10%;
+  height: fit-content;
 
   background-color: rgba(255, 255, 255, 0);
   border-radius: 50%;
-  padding: 2%;
+  padding: 1%;
   border: none;
 
   display: flex;
