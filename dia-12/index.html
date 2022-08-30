@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Desafio 12</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <!-- <header>
+      <input type="text" placeholder="Pesquise aqui" id="search-box" />
+    </header> -->
+    <h1>Galeria de imagens</h1>
+
+    <!-- <h3></h3> -->
+
+    <div class="imgs-container">
+      <img
+        src="https://source.unsplash.com/1920x1080/?food"
+        alt="Imagem de comida"
+        data-number=0
+        onclick="full(this)"
+      />
+      <img
+        src="https://source.unsplash.com/1920x1080/?foods"
+        alt="Imagem de comida"
+        data-number=1
+        onclick="full(this)"
+      />
+      <img
+        src="https://source.unsplash.com/1920x1080/?comida"
+        alt="Imagem de comida"
+        data-number=2
+        onclick="full(this)"
+      />
+
+      <img
+        src="https://source.unsplash.com/1920x1080/?cat"
+        alt="Imagem de gatos"
+        data-number=3
+        onclick="full(this)"
+      />
+      <img
+        src="https://source.unsplash.com/1920x1080/?cats"
+        alt="Imagem de gatos"
+        data-number=4
+        onclick="full(this)"
+      />
+      <img
+        src="https://source.unsplash.com/1920x1080/?gato"
+        alt="Imagem de gatos"
+        data-number=5
+        onclick="full(this)"
+      />
+
+      <img
+        src="https://source.unsplash.com/1920x1080/?car"
+        alt="Imagem de carros"
+        data-number=6
+        onclick="full(this)"
+      />
+      <img
+        src="https://source.unsplash.com/1920x1080/?cars"
+        alt="Imagem de carros"
+        data-number=7
+        onclick="full(this)"
+      />
+      <img
+        src="https://source.unsplash.com/1920x1080/?carro"
+        alt="Imagem de carros"
+        data-number=8
+        onclick="full(this)"
+      />
+
+      <img
+        src="https://source.unsplash.com/1920x1080/?clothing"
+        alt="Imagem de roupas"
+        data-number=9
+        onclick="full(this)"
+      />
+      <img
+        src="https://source.unsplash.com/1920x1080/?clothes"
+        alt="Imagem de roupas"
+        data-number=10
+        onclick="full(this)"
+      />
+      <img
+        src="https://source.unsplash.com/1920x1080/?shirt"
+        alt="Imagem de roupas"
+        data-number=11
+        onclick="full(this)"
+      />
+
+      <img
+        src="https://source.unsplash.com/1920x1080/?computer"
+        alt="Imagem de computador"
+        data-number=12
+        onclick="full(this)"
+      />
+      <img
+        src="https://source.unsplash.com/1920x1080/?computers"
+        alt="Imagem de computador"
+        data-number=13
+        onclick="full(this)"
+      />
+      <img
+        src="https://source.unsplash.com/1920x1080/?laptop"
+        alt="Imagem de computador"
+        data-number=14
+        onclick="full(this)"
+      />
+
+      <img
+        src="https://source.unsplash.com/1920x1080/?building"
+        alt="Imagem de prédios"
+        data-number=15
+        onclick="full(this)"
+      />
+      <img
+        src="https://source.unsplash.com/1920x1080/?scyscraper"
+        alt="Imagem de prédios"
+        data-number=16
+        onclick="full(this)"
+      />
+      <img
+        src="https://source.unsplash.com/1920x1080/?predio"
+        alt="Imagem de prédios"
+        data-number=17
+        onclick="full(this)"
+      />
+    </div>
+
+    <div class="full-screen-img-container">
+      <div class="container-1">
+        <button onclick="backImg()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path fill="none" d="M0 0h24v24H0z" />
+            <path
+              d="M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z"
+              fill="rgba(255,255,255,1)"
+            />
+          </svg>
+        </button>
+        <div class="container-2">
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path
+                d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"
+                fill="rgba(255,255,255,1)"
+              />
+            </svg>
+          </button>
+          <img
+            id="full-screen-img"
+          />
+        </div>
+        <button onclick="nextImg()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path fill="none" d="M0 0h24v24H0z" />
+            <path
+              d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"
+              fill="rgba(255,255,255,1)"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <footer>
+      Powered by
+      <a href="https://github.com/lucyanovidio" target="_blank"
+        ><b>Lucyan Ovídio</b></a
+      >.
+    </footer>
+  </body>
+</html>
