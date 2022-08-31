@@ -1,0 +1,235 @@
+/* == GLOBAL == */
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+
+  background-color: rgb(25, 25, 34);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* == NAV == */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 3rem 4rem;
+  background-color: blueviolet;
+}
+
+nav h2 {
+  font-size: 2.5rem;
+}
+
+nav .menu {
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+
+  padding: 14rem 2rem 2rem;
+  background-color: blueviolet;
+
+  display: flex;
+  justify-content: center;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transform: translateX(100%);
+  transition: transform 400ms;
+}
+
+nav ul {
+  list-style: none;
+  font-size: 1.8rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+nav ul li a {
+  transition: 400ms;
+}
+
+nav .menu ul li a:hover {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+nav button {
+  border: none;
+  background: none;
+
+  cursor: pointer;
+}
+
+nav #close-menu-btn {
+  display: none;
+}
+
+/* == MENU-EXPANDED == */
+
+body.menu-expanded .menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+body.menu-expanded #open-menu-btn {
+  display: none;
+}
+
+body.menu-expanded #close-menu-btn {
+  display: initial;
+}
+
+/* == MAIN == */
+
+main {
+  width: 80%;
+  height: fit-content;
+  max-width: 80rem;
+
+  margin: 19rem 4rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+#cat {
+  width: 70%;
+}
+
+.text {
+  text-align: center;
+}
+
+.text h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.text p {
+  font-size: 1.2rem;
+}
+
+/* == FOOTER == */
+
+footer {
+  position: absolute;
+  bottom: 3rem;
+  margin-inline: 1rem;
+
+  text-align: center;
+  font-size: 1.2rem;
+  opacity: .6;
+  transition: 300ms;
+}
+
+footer:hover {
+  opacity: 1;
+}
+
+/* == RESPONSIVO == */
+
+/* eu fiz ao contrário aqui e deu moh confusão. Era pra eu começar com mobile first, então aqui seria max-width, e eu colocaria aqui com ficaria em desktop, mas eu acabei começando lá como desktop e depois pra passar pra cá eu me enrolei, pq no @media de 300px eu fiz pra mobile, e dps os originais eu mudei pra mobile, então ficou um media pra mobile pequenininho e  um media pra desktop. Se atentar a começar direito pra n comprometer o final na hora de fazer o responsivo */
+@media (min-width: 600px) {
+  nav #open-menu-btn {
+    display: none;
+  }
+
+  nav .menu {
+    width: fit-content;
+    height: fit-content;
+
+    position: initial;
+    padding: 0;
+
+    visibility: visible;
+    opacity: 1;
+
+    transform: translateX(0);
+    transition: none;
+  }
+
+  nav .menu ul {
+    flex-direction: row;
+  }
+
+  main {
+    flex-direction: row;
+    margin: 23rem;
+  }
+
+  #cat {
+    width: 50%;
+  }
+
+  .text {
+    text-align: left;
+  }
+
+  .text h1 {
+    font-size: 4rem;
+  }
+
+  .text p {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 300px) {
+  nav {
+    padding-inline: 3rem;
+  }
+  nav h2 {
+    font-size: 2rem;
+  }
+  .text h1 {
+    font-size: 2rem;
+  }
+  .text p {
+    font-size: 1rem;
+  }
+  footer {
+    font-size: 1rem;
+  }
+}
