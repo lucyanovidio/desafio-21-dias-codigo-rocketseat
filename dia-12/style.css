@@ -109,7 +109,6 @@ img:hover {
 
 .full-screen-img-container .container-2 img {
   width: 100%;
-  /* pq o button q divide a caixa com a img ta pegando 15% */
   height: 85%;
   object-fit: contain;
 }
