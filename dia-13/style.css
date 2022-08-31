@@ -125,7 +125,7 @@ main {
   height: fit-content;
   max-width: 80rem;
 
-  margin: 19rem 4rem;
+  margin: 19rem 4rem 6rem;
 
   display: flex;
   flex-direction: column;
@@ -154,9 +154,8 @@ main {
 /* == FOOTER == */
 
 footer {
-  position: absolute;
-  bottom: 3rem;
   margin-inline: 1rem;
+  margin-bottom: 3rem;
 
   text-align: center;
   font-size: 1.2rem;
@@ -170,7 +169,6 @@ footer:hover {
 
 /* == RESPONSIVO == */
 
-/* eu fiz ao contrário aqui e deu moh confusão. Era pra eu começar com mobile first, então aqui seria max-width, e eu colocaria aqui com ficaria em desktop, mas eu acabei começando lá como desktop e depois pra passar pra cá eu me enrolei, pq no @media de 300px eu fiz pra mobile, e dps os originais eu mudei pra mobile, então ficou um media pra mobile pequenininho e  um media pra desktop. Se atentar a começar direito pra n comprometer o final na hora de fazer o responsivo */
 @media (min-width: 600px) {
   nav #open-menu-btn {
     display: none;
@@ -196,7 +194,7 @@ footer:hover {
 
   main {
     flex-direction: row;
-    margin: 23rem;
+    margin: 23rem 4rem 10rem;
   }
 
   #cat {
@@ -222,6 +220,9 @@ footer:hover {
   }
   nav h2 {
     font-size: 2rem;
+  }
+  main {
+    margin-bottom: 8rem;
   }
   .text h1 {
     font-size: 2rem;
