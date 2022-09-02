@@ -1,8 +1,3 @@
-// como q eu marco qual é a resposta certa? fazendo a1, a2, a3... d4, e respostaCerta1, ... respostaCerta4 sendo igual a variavel q for a resposta certa
-
-// depois fazer uma tela pra tipo "carregando seu resultado", sla, pra n ir pra útima tela assim seco
-// Ainda falta responsividade tá meu amor? bota peito e sustenta
-
 // PEGANDO
 
 // Caixas pra mudar de tela
@@ -151,9 +146,6 @@ let answer$3
 let answer$4
 let answer$5
 
-// window.onload = () => {
-//   startQuiz()
-// }
 
 // FUNÇÃO PRA COMEÇAR O QUIZ
 
@@ -598,16 +590,16 @@ function next() {
 
     if (total == 0) {
       h2$.innerHTML = 'Puxa, não foi dessa vez.'
-      rating.style.color = 'red'
+      rating.classList.add('wrong')
     } else if (total <= 2) {
       h2$.innerHTML = 'Não foi tão ruim!'
-      rating.style.color = 'yellow'
+      rating.classList.add('yellow')
     } else if (total <= 4) {
       h2$.innerHTML = 'Muito bom! Foi por pouco!'
-      rating.style.color = 'none'
+      rating.classList.add('correct')
     } else if (total == 5) {
       h2$.innerHTML = 'Parabéns! Você gabaritou!'
-      rating.style.color = 'none'
+      rating.classList.add('correct')
     }
 
     rating.innerHTML = total
@@ -627,6 +619,8 @@ function next() {
     correct5.innerHTML = d5
   }
 }
+
+// FUNÇÃO PRA VOLTAR PRA TELA ANTERIOR
 
 function back() {
   if (i$q == 5) {
@@ -759,6 +753,8 @@ function back() {
   }
 }
 
+// VOLTAR PRA TELA DA PRIMEIRA QUESTÃO E RECOMEÇAR
+
 function restart() {
   // Voltando pra tela da primeira questão
 
@@ -788,4 +784,10 @@ function restart() {
   box2.classList.remove('b')
   box2.classList.remove('c')
   box2.classList.remove('d')
+
+  // Removendo as classes do span que printa a pontuação com cor
+
+  rating.classList.remove('correct')
+  rating.classList.remove('yellow')
+  rating.classList.remove('wrong')
 }
