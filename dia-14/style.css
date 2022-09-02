@@ -118,7 +118,6 @@ body.box-3 footer {
   align-items: center;
 }
 
-/* nada a ver essa animação vey */
 @keyframes box-1 {
   0% {
     filter: brightness(1);
