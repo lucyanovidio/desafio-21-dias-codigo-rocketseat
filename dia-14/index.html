@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Desafio 14</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+
+      <section id="box-1">
+        <h1>QUIZ</h1>
+        <p>Este quiz é para testar seus conhecimentos em HTML5 e CSS3. <b>Vamos começar?</b></p>
+
+        <button id="start-btn" onclick="startQuiz()">Começar quiz</button>
+      </section>
+
+      <section id="box-2">
+        <h4></h4>
+
+        <ul>
+          <li id="a" onclick="a()"><span>a</span><span></span></li>
+          <li id="b" onclick="b()"><span>b</span><span></span></li>
+          <li id="c" onclick="c()"><span>c</span><span></span></li>
+          <li id="d" onclick="d()"><span>d</span><span></span></li>
+        </ul>
+
+        <div class="buttons">
+          <button class="back-btn" onclick="back()">Anterior</button>
+          <button class="next-btn" onclick="next()">Próxima</button>
+        </div>
+      </section>
+
+      <section id="box-3">
+        <header>
+          <h2></h2>
+          <p id="rating">Sua pontuação foi: <span></span></p>
+  
+          <button id="restart-btn" onclick="restart()">Voltar para o início</button>
+        </header>
+
+        <h3>Confira suas respostas</h3>
+        
+        <div id="answers">
+          <div id="answer-1" class="answer-box">
+            <h4></h4>
+            <p class="player-answer">Você respondeu: <span></span></p>
+            <p class="correct-answer">A resposta certa é: <span></span></p>
+          </div>
+          <div id="answer-2" class="answer-box">
+            <h4></h4>
+            <p class="player-answer">Você respondeu: <span></span></p>
+            <p class="correct-answer">A resposta certa é: <span></span></p>
+          </div>
+          <div id="answer-3" class="answer-box">
+            <h4></h4>
+            <p class="player-answer">Você respondeu: <span></span></p>
+            <p class="correct-answer">A resposta certa é: <span></span></p>
+          </div>
+          <div id="answer-4" class="answer-box">
+            <h4></h4>
+            <p class="player-answer">Você respondeu: <span></span></p>
+            <p class="correct-answer">A resposta certa é: <span></span></p>
+          </div>
+          <div id="answer-5" class="answer-box">
+            <h4></h4>
+            <p class="player-answer">Você respondeu: <span></span></p>
+            <p class="correct-answer">A resposta certa é: <span></span></p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      Powered by
+      <a href="https://github.com/lucyanovidio" target="_blank"
+        ><b>Lucyan Ovídio</b></a
+      >.
+    </footer>
+
+  </body>
+</html>
