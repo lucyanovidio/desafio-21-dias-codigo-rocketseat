@@ -9,6 +9,7 @@
   --text-color: #fff;
   --text-color-2: #000;
   --correct-color: #00ff00;
+  --yellow-color: yellow;
   --wrong-color: #ff0000;
   --font-family: 'Roboto', sans-serif;
   font-size: 62.5%;
@@ -305,9 +306,20 @@ button:hover {
 }
 
 #box-3 p#rating span {
-  color: var(--correct-color);
   font-weight: bold;
   font-size: 3rem;
+}
+
+#box-3 p#rating span.correct {
+  color: var(--correct-color);
+}
+
+#box-3 p#rating span.yellow {
+  color: var(--yellow-color);
+}
+
+#box-3 p#rating span.wrong {
+  color: var(--wrong-color);
 }
 
 /* ANSWERS */
