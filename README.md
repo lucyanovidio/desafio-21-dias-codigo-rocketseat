@@ -21,6 +21,6 @@
 + #11 - Crie o layout de um formulário de login;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-11">FEITO</a> ✔️
 + #12 - Desenvolva uma galeria de imagens;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-12">FEITO</a> ✔️
 + #13 - Desenvolva um menu responsivo;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-13">FEITO</a> ✔️
-+ #14 - Crie um formulário de quizzes;
++ #14 - Crie um formulário de quizzes;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-14">FEITO</a> ✔️
 
 #21diasdecodigo #rocketseat #soumarmiteiro
