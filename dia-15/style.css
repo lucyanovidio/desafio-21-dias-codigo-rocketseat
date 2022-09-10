@@ -81,12 +81,12 @@ nav {
   transition: 100ms;
 }
 
-nav.scroll-1 {
+body.scroll-1 nav {
   visibility: hidden;
   opacity: 0;
 }
 
-body nav.scroll-2 button:hover {
+body.scroll-2 nav button:hover {
   fill: var(--primary-color);
 }
 
@@ -122,7 +122,7 @@ nav #logo {
   color: var(--text-color-2);
 }
 
-nav.scroll-2 {
+body.scroll-2 nav {
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(1rem);
   -webkit-backdrop-filter: blur(1rem);
@@ -130,12 +130,12 @@ nav.scroll-2 {
   --text-color-2: #000;
 }
 
-body.dark-mode nav.scroll-2 {
+body.dark-mode.scroll-2 nav {
   --text-color-2: #fff;
 }
 
-body nav.scroll-2 #logo,
-body nav.scroll-2 button {
+body.scroll-2 nav #logo,
+body.scroll-2 nav button {
   transition: 300ms;
 }
 
