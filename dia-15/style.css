@@ -1,0 +1,1534 @@
+/* ========== GLOBAL ========== */
+
+:root {
+  --bg-color: #eee;
+  --bg-color-2: #fafafa;
+  --bg-color-3: rgba(0, 0, 0, 0.7);
+  --bg-color-4: #dfdfdf;
+  --primary-color: #ff0000;
+  --secundary-color: #050505;
+  --text-color: #000;
+  --text-color-2: #fff;
+  --text-color-3: rgba(0, 0, 0, 0.7);
+  --font-family: 'Roboto', sans-serif;
+  --nav-height: 7.7rem;
+
+  font-size: 62.5%;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: var(--font-family);
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--bg-color);
+
+  font-size: 1.6rem;
+  scroll-behavior: smooth;
+
+  transition: 1s;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 76.8rem;
+  margin: 0 auto;
+  padding-inline: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ========== DARK MODE ========== */
+
+body.dark-mode {
+  --bg-color: #1a1a1a;
+  --bg-color-2: #1f1f1f;
+  --bg-color-3: rgb(163, 0, 0);
+  --primary-color: #ff0000;
+  --secundary-color: #000;
+  --text-color: #fff;
+  --text-color-2: #fff;
+  --text-color-3: rgba(255, 255, 255, 0.7);
+}
+
+/* ========== NAVIGATION ========== */
+
+nav {
+  width: 100%;
+  height: var(--nav-height);
+
+  position: fixed;
+  left: 0;
+  z-index: 100;
+
+  transition: 100ms;
+}
+
+nav.scroll-1 {
+  visibility: hidden;
+  opacity: 0;
+}
+
+body nav.scroll-2 button:hover {
+  fill: var(--primary-color);
+}
+
+nav .wrapper {
+  padding-block: 2rem;
+  /* pq o wrapper puro já tem padding inline, e só esse q vai precisar de block msm */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* o wrapper do nav aqui n ta alinhado ao centro como o carrossel (ou o contrario, n sei), mas deixei assim */
+}
+
+nav button svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+nav button {
+  transition: 300ms;
+  fill: var(--text-color-2);
+}
+
+nav button:hover {
+  fill: var(--primary-color);
+  cursor: pointer;
+}
+
+nav #logo {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--text-color-2);
+}
+
+nav.scroll-2 {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+
+  --text-color-2: #000;
+}
+
+body.dark-mode nav.scroll-2 {
+  --text-color-2: #fff;
+}
+
+body nav.scroll-2 #logo,
+body nav.scroll-2 button {
+  transition: 300ms;
+}
+
+/* == MENU == */
+
+nav .wrapper .close-menu {
+  display: none;
+  transition: 300ms;
+}
+
+nav .wrapper .close-menu:hover {
+  fill: var(--primary-color);
+}
+
+nav .wrapper .search,
+nav .wrapper .login,
+nav .wrapper .nav-icons {
+  visibility: hidden;
+  opacity: 0;
+
+  width: 100vw;
+  height: 100vh;
+  padding-top: 12rem;
+
+  background: var(--bg-color);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transform: translateX(100%);
+  transition: 400ms;
+}
+
+nav .wrapper #menu,
+nav .wrapper #icons {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+}
+
+nav .wrapper #menu {
+  flex-direction: column;
+  gap: 3rem;
+
+  margin-bottom: 6rem;
+}
+
+nav .wrapper #menu a {
+  font-size: 2rem;
+  color: var(--text-color);
+  transition: 300ms;
+}
+
+nav .wrapper #menu a:hover {
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+nav .wrapper #icons {
+  gap: 2rem;
+}
+
+nav .wrapper #icons .icon {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+nav .wrapper .icon path:nth-child(2) {
+  fill: var(--text-color);
+  transition: 300ms;
+}
+
+nav .wrapper .icon:hover path:nth-child(2),
+nav .wrapper .icon:hover {
+  fill: var(--primary-color);
+  cursor: pointer;
+}
+
+body.menu-expanded {
+  overflow: hidden;
+}
+
+body.menu-expanded nav .wrapper .nav-icons {
+  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+}
+
+body.menu-expanded nav .wrapper .open-menu {
+  display: none;
+}
+
+body.menu-expanded nav .wrapper .close-menu {
+  display: initial;
+}
+
+body.menu-expanded #logo,
+body.menu-expanded button {
+  fill: var(--text-color);
+  color: var(--text-color);
+}
+
+/* == SEARCH == */
+
+nav .wrapper .search,
+nav .wrapper .login {
+  visibility: hidden;
+  opacity: 0;
+}
+
+nav .wrapper .search header,
+nav .wrapper .login header {
+  width: 30rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+
+  border-bottom: 0.1rem solid var(--text-color);
+}
+
+nav .wrapper h3 {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+nav .wrapper .close-search {
+  transition: 300ms;
+}
+
+nav .wrapper .close-search:hover {
+  fill: var(--primary-color);
+}
+
+nav .wrapper .search .content {
+  width: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .wrapper .search .content input {
+  width: 85%;
+  padding: 1rem;
+
+  border: 0.1rem solid var(--secundary-color);
+  border-radius: 0.5rem;
+}
+
+body.search-expanded nav .wrapper .search {
+  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+}
+
+body.search-expanded nav .wrapper .close-menu {
+  display: none;
+}
+
+/* == LOGIN == */
+
+nav .wrapper .close-login {
+  transition: 300ms;
+}
+
+nav .wrapper .close-login:hover {
+  fill: var(--primary-color);
+}
+
+nav .wrapper .login fieldset.inputs {
+  width: 30rem;
+  border: none;
+  margin-bottom: 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+nav .wrapper .login fieldset.inputs input {
+  padding: 1rem;
+
+  border: 0.1rem solid var(--secundary-color);
+  border-radius: 0.5rem;
+}
+
+nav .wrapper .login a {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+
+  margin-bottom: 1.5rem;
+  transition: 300ms;
+}
+
+nav .wrapper .login a:hover {
+  filter: brightness(0.8);
+}
+
+nav .wrapper .login a + button {
+  padding: 1rem 4rem;
+
+  border-radius: 2rem;
+  background-color: var(--primary-color);
+
+  color: var(--text-color-2);
+  font-size: 1.6rem;
+
+  transition: 300ms;
+}
+
+nav .wrapper .login a + button:hover {
+  filter: brightness(0.8);
+}
+
+body.login-expanded nav .wrapper .login {
+  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+}
+
+body.login-expanded nav .wrapper .close-menu {
+  display: none;
+}
+
+/* ========== HOME ========== */
+
+#home {
+  width: 100%;
+  height: 40rem;
+  min-height: 40rem;
+  max-height: 45rem;
+  padding: 0;
+
+  position: relative;
+}
+
+#home .home-wrapper {
+  width: 100%;
+  /* min-width: 30rem;
+  max-width: 76.8rem; */
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  background: var(--bg-color);
+  transition: 1s;
+}
+
+/* #home .carrossel {
+  width: 50rem;
+  height: 40rem;
+
+  *********!!!*********
+  overflow-x: auto;
+  overflow: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  display: flex;
+} */
+
+#home .home-wrapper img {
+  width: 100%;
+  /* min-width: 50rem;
+  max-width: 70rem; */
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; */
+}
+
+/* #home .carrossel #img-1 {
+  transform: translateX(0);
+  transition: 700ms;
+}
+
+#home .carrossel #img-2 {
+  visibility: hidden; */
+
+/* height: 39rem;
+  transform: translateX(0);
+  transition: 700ms;
+}
+
+#home .carrossel button {
+  position: absolute;
+  top: 50%; */
+/* transform: translateY(-50%); */
+
+/* antes eu tinha feito como tá aqui acima, dps aprendi que colocando o top e o bottom 0 ele já vai pro meio
+  top: 0;
+  bottom: 0;
+  
+  z-index: 1;
+
+  fill: var(--text-color-2);
+}
+
+#home .carrossel button#right-btn {
+  left: 90%;
+  transition: 300ms;
+
+  ISSO AQUI seria pra fazer um degradê pra dar a impressão de que tem mais coisa pra direita. Nesse caso já tá legal sem isso, mas pra uma galeria de imagem fica legal
+
+  width: 10rem;
+  background: linear-gradient(to right, transparent 0%, black 100%);
+}
+
+#home .carrossel button svg {
+  width: 5rem;
+  height: 5rem;
+}
+
+#home .carrossel button:hover {
+  fill: var(--primary-color);
+}
+
+#home .carrossel button#left-btn {
+  visibility: hidden;
+  opacity: 0;
+  transition: 300ms;
+}
+
+body.img-2 #home .carrossel button#right-btn {
+  visibility: hidden;
+}
+
+body.img-2 #home .carrossel button#left-btn {
+  visibility: visible;
+  opacity: 1;
+}
+
+body.img-2 #home .carrossel #img-2 {
+  transform: translateX(-100%);
+  visibility: visible;
+}
+
+body.img-2 #home .carrossel #img-1 {
+  transform: translateX(-100%);
+  visibility: hidden;
+} */
+
+#home .col {
+  height: fit-content;
+  width: 20rem;
+
+  position: absolute;
+  top: 13rem;
+  left: 6rem;
+
+  color: var(--text-color-2);
+  transition: 700ms;
+}
+
+#home .col h1 {
+  font-size: 3rem;
+}
+
+#home .col p {
+  font-size: 1.4rem;
+  margin: 0.5rem 0 1rem;
+}
+
+#home .col button {
+  color: var(--text-color-2);
+  font-size: 1.4rem;
+  font-weight: bold;
+
+  background: var(--primary-color);
+  padding: 1rem 2rem;
+  transition: 400ms;
+}
+
+#home .col button:hover {
+  background: none;
+  border: 0.2rem solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* body.img-2 #home .col {
+  left: 50%;
+  text-align: right;
+} */
+
+/* ========== PRODUCTS ========== */
+
+section {
+  padding-top: calc(var(--nav-height) + 3rem);
+  padding-bottom: var(--nav-height);
+
+  transition: 1s;
+}
+
+section header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+section h2 {
+  font-size: 2.8rem;
+  color: var(--text-color);
+}
+
+section header p {
+  margin-top: 0.6rem;
+
+  font-size: 1.6rem;
+  color: var(--text-color-3);
+}
+
+#products {
+  background: var(--bg-color);
+}
+
+#products .content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 3rem;
+}
+
+#products .product-container {
+  width: fit-content;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  display: none;
+}
+
+#products .product-container:nth-child(1) {
+  display: initial;
+}
+
+#products .product-container:nth-child(2) {
+  display: initial;
+}
+
+#products .product-container:nth-child(3) {
+  display: initial;
+}
+
+#products .product-container:nth-child(4) {
+  display: initial;
+}
+
+#products .product {
+  position: relative;
+
+  width: 100%;
+  max-width: 20rem;
+  margin: 1rem 0 0;
+
+  border-radius: 2rem;
+  transition: 500ms;
+}
+
+#products .product:hover {
+  margin: 0 0 1rem;
+}
+
+/* #products .product:hover > img {
+  animation: product 800ms forwards;
+} */
+
+#products .product img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+
+  transition: 500ms;
+}
+
+#products .product:hover > img {
+  filter: brightness(0.9);
+}
+
+/* @keyframes product {
+  to {
+    width: 21rem;
+  }
+} */
+
+#products .product .buttons {
+  visibility: hidden;
+  opacity: 0;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+
+  transition: 400ms;
+}
+
+#products .product:hover {
+  cursor: pointer;
+}
+
+#products .product:hover > .buttons {
+  visibility: visible;
+  opacity: 1;
+}
+
+#products .product .buttons a svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+#products .product .buttons a {
+  background: var(--text-color-2);
+  border-radius: 50%;
+
+  width: 4rem;
+  height: 4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 500ms;
+}
+
+#products .product .buttons a:hover {
+  background-color: var(--secundary-color);
+}
+
+#products .product .buttons a:hover > svg {
+  fill: var(--text-color-2);
+}
+
+#products .product-container a {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+#products .product-container p {
+  margin-top: 0.4rem;
+
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}
+
+#products .product-container p s {
+  color: var(--text-color-3);
+  margin-right: 0.8rem;
+}
+
+#products button {
+  padding: 1.3rem 2rem;
+  margin: 5rem auto 0;
+
+  background: none;
+  border: 0.2rem solid var(--text-color);
+
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 1.3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  transition: 300ms;
+}
+
+#products button:hover {
+  background: var(--primary-color);
+  border: 0.2rem solid var(--primary-color);
+
+  color: var(--text-color-2);
+}
+
+#products button svg {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+#products button svg path:nth-child(2) {
+  fill: var(--text-color);
+  transition: 300ms;
+}
+
+#products button:hover svg path:nth-child(2) {
+  fill: var(--text-color-2);
+}
+
+/* ========== CARDS ========== */
+
+#cards {
+  padding-block: var(--nav-height);
+  background: var(--bg-color-3);
+}
+
+#cards .wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+#cards .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--text-color-2);
+  text-align: center;
+}
+
+#cards .card svg {
+  width: 5rem;
+  height: 5rem;
+}
+
+#cards .card h4 {
+  font-size: 1.6rem;
+  margin: 2rem 0 0.5rem;
+}
+
+#cards .card p {
+  font-size: 1.4rem;
+  opacity: 0.5;
+}
+
+/* ========== COSTUMERS ========== */
+
+#costumers {
+  background: var(--bg-color);
+}
+
+#costumers .wrapper .content {
+  display: flex;
+  flex-direction: column;
+}
+
+#costumers .content .costumer {
+  width: 100%;
+  min-height: 25rem;
+
+  margin: 0 auto;
+  padding: 2rem;
+  border: 0.1rem solid var(--text-color-3);
+
+  color: var(--text-color-3);
+  font-size: 1.4rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+#costumers .costumer .costumer-profile {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#costumers .costumer .costumer-profile p:nth-child(1) {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+#costumers .costumer .costumer-profile p:nth-child(3) {
+  font-size: 1.2rem;
+}
+
+#costumers .costumer .costumer-profile img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ========== CONTACT ========== */
+
+#contact {
+  background: var(--bg-color-2);
+}
+
+#contact .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+
+  color: var(--text-color-3);
+  font-size: 1.4rem;
+}
+
+#contact .content .col-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#contact .content svg,
+#contact .content img {
+  width: 2.4rem;
+  height: 2.4rem;
+
+  fill: var(--primary-color);
+}
+
+#contact .content p {
+  width: 80%;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#contact .content button {
+  padding: 2rem 3rem;
+
+  color: var(--text-color-2);
+  font-size: 1.4rem;
+  font-weight: bold;
+
+  background: var(--primary-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  transition: 400ms;
+}
+
+#contact .content button:hover {
+  background: none;
+  border: 0.2rem solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+#contact .content button:hover > svg path:nth-child(2) {
+  fill: var(--primary-color);
+}
+
+/* ========== FOOTER ========== */
+
+footer {
+  padding-block: 7rem;
+  background: var(--secundary-color);
+}
+
+footer .wrapper,
+footer .wrapper .col-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+footer a {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--text-color-2);
+}
+
+footer .social-links svg {
+  margin-top: 0.5rem;
+  transition: 400ms;
+}
+
+footer .social-links svg:hover {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+footer .social-links svg path:nth-child(2) {
+  fill: #eee;
+}
+
+footer .social-links svg:nth-child(1) path:nth-child(2) {
+  transition: 400ms;
+}
+
+footer .social-links svg:nth-child(1):hover path:nth-child(2) {
+  fill: #3a559f;
+}
+
+footer .social-links svg:nth-child(2) path:nth-child(2) {
+  transition: 400ms;
+}
+
+footer .social-links svg:nth-child(2):hover path:nth-child(2) {
+  fill: #1da1f2;
+}
+
+footer .social-links svg:nth-child(3) path:nth-child(2) {
+  transition: 400ms;
+}
+
+footer .social-links svg:nth-child(3):hover path:nth-child(2) {
+  fill: #e42158;
+}
+
+footer .social-links svg:nth-child(4) path:nth-child(2) {
+  transition: 400ms;
+}
+
+footer .social-links svg:nth-child(4):hover path:nth-child(2) {
+  fill: #0077b7;
+}
+
+footer .social-links svg + svg {
+  margin-left: 1rem;
+}
+
+footer p {
+  font-size: 1.4rem;
+  color: var(--text-color-2);
+  opacity: 0.6;
+  transition: 300ms;
+}
+
+footer p a {
+  font-size: 1.4rem;
+}
+
+footer p:hover {
+  opacity: 1;
+}
+
+/* ========== BACK TO TOP BUTTON ========== */
+
+#backToTopBtn {
+  position: fixed;
+  bottom: 1.2rem;
+  right: 2rem;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: 400ms;
+}
+
+#backToTopBtn svg {
+  width: 6rem;
+  height: 6rem;
+}
+
+#backToTopBtn.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ========== DARK MODE BUTTON ========== */
+
+#dark-mode-btn {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+
+  padding: 1.2rem;
+
+  border-radius: 50%;
+  background-color: black;
+
+  text-align: center;
+}
+
+#dark-mode-btn:hover {
+  cursor: pointer;
+}
+
+#dark-mode-btn i {
+  color: white;
+  font-size: 2rem;
+}
+
+#dark-mode-btn .fa-sun {
+  display: none;
+}
+
+#dark-mode-btn.to-light-mode {
+  background-color: white;
+  padding: 1.1rem;
+}
+
+#dark-mode-btn.to-light-mode .fa-moon {
+  display: none;
+}
+
+#dark-mode-btn.to-light-mode .fa-sun {
+  display: initial;
+  color: black;
+  font-size: 2.4rem;
+}
+
+/* ========== RESPONSIVE ========== */
+
+/* tem q ver dps o bug do 300px do nav (FAZER 310px) */
+/* no 300px diminui o font size das coisas */
+@media (min-width: 1024px) {
+  /* ========== GLOBAL ========== */
+
+  .wrapper {
+    max-width: 102.4rem;
+  }
+
+  /* ========== NAVIGATION ========== */
+
+  nav .wrapper .search,
+  nav .wrapper .login {
+    width: 40rem;
+    height: 100vh;
+    padding: 5rem;
+
+    background: var(--bg-color-4);
+
+    left: initial;
+    right: 0;
+
+    align-items: flex-end;
+  }
+
+  body.login-expanded nav .wrapper,
+  body.search-expanded nav .wrapper {
+    --text-color-2: #000;
+  }
+
+  body.login-expanded nav .wrapper #logo,
+  body.search-expanded nav .wrapper #logo {
+    color: #fff;
+  }
+
+  body.login-expanded nav .wrapper .nav-icons,
+  body.search-expanded nav .wrapper .nav-icons {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  body.dark-mode.login-expanded nav .wrapper,
+  body.dark-mode.search-expanded nav .wrapper {
+    --text-color-2: #fff;
+  }
+
+  nav .wrapper .open-menu,
+  nav .wrapper .close-menu {
+    display: none;
+  }
+
+  nav .wrapper .nav-icons {
+    visibility: visible;
+    opacity: 1;
+
+    width: fit-content;
+    height: fit-content;
+    background: none;
+
+    position: initial;
+    z-index: 1;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+
+    transform: translateX(0);
+  }
+
+  nav .wrapper #menu {
+    flex-direction: row;
+    margin: 0;
+  }
+
+  nav .wrapper #menu a {
+    color: var(--text-color-2);
+  }
+
+  nav .wrapper .icon path:nth-child(2) {
+    fill: var(--text-color-2);
+    transition: 300ms;
+  }
+
+  nav .wrapper .icon:hover path:nth-child(2),
+  nav .wrapper .icon:hover {
+    fill: var(--primary-color);
+  }
+
+
+/* Isso n funciona pq se o nav some, como q o login e o search vão aparecer? 
+
+  body nav.scroll-1 .search,
+  body nav.scroll-1 .login {
+    visibility: visible;
+    opacity: 1;
+    z-index: 100;
+  } */
+
+  /* ========== HOME ========== */
+
+  section#home {
+    height: 85rem;
+    min-height: 85rem;
+    max-height: 90rem;
+  }
+
+  section#home .col {
+    width: 60rem;
+    top: 35rem;
+    left: 13rem;
+  }
+
+  section#home .col h1 {
+    color: var(--text-color-2);
+    font-size: 6.5rem;
+  }
+
+  section#home .col p {
+    font-size: 1.7rem;
+    margin: 1rem 0 2rem;
+  }
+
+  section#home .col button {
+    font-size: 1.7rem;
+    padding: 1.5rem 2.5rem;
+  }
+
+  /* ========== PRODUCTS ========== */
+
+  section h2 {
+    font-size: 3.4rem;
+  }
+
+  section header p {
+    font-size: 1.8rem;
+  }
+
+  #products .content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* ========== CARDS ========== */
+
+  #cards .wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* ========== COSTUMERS ========== */
+
+  #costumers .wrapper .content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* ========== CONTACT ========== */
+
+  section#contact .content {
+    justify-content: space-around;
+  }
+
+  #contact .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+
+    font-size: 1.6rem;
+  }
+
+  /* ========== FOOTER ========== */
+
+  footer .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  footer .wrapper .col-1 {
+    margin-left: 5rem;
+  }
+
+  footer .wrapper p {
+    margin-right: 5rem;
+  }
+
+  footer a {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* ========== HOME ========== */
+
+  #home {
+    height: 50rem;
+    min-height: 50rem;
+    max-height: 52rem;
+  }
+
+  #home .col {
+    width: 27rem;
+    top: 16rem;
+    left: 12rem;
+  }
+
+  #home .col h1 {
+    color: var(--text-color-2);
+    font-size: 4rem;
+  }
+
+  #home .col p {
+    font-size: 1.6rem;
+  }
+
+  #home .col button {
+    font-size: 1.6rem;
+  }
+
+  /* ========== COSTUMERS ========== */
+
+  #costumers .content .costumer {
+    height: 28rem;
+    font-size: 1.5rem;
+  }
+
+  #costumers .costumer .costumer-profile img {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  /* ========== NAVIGATION ========== */
+
+  nav #logo {
+    font-size: 2.2rem;
+  }
+
+  nav button svg,
+  nav .nav-icons #icons .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  nav .wrapper #menu a {
+    font-size: 1.6rem;
+  }
+
+  /* ========== HOME ========== */
+
+  #home .col {
+    width: 13.5rem;
+
+    top: 13rem;
+    left: 4rem;
+  }
+
+  #home .col h1 {
+    color: var(--text-color-2);
+    font-size: 2.5rem;
+  }
+
+  #home .col p {
+    font-size: 1.2rem;
+  }
+
+  #home .col button {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.4rem;
+  }
+
+  /* ========== PRODUCTS ========== */
+
+  section h2 {
+    font-size: 2.4rem;
+  }
+
+  section header p {
+    font-size: 1.2rem;
+  }
+
+  #products .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #products .product {
+    max-width: 15rem;
+  }
+
+  #products .product .buttons a {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  #products .product-container a {
+    font-size: 1.5rem;
+  }
+
+  #products .product-container p {
+    font-size: 1.4rem;
+  }
+
+  #products button {
+    padding: 1rem 1.8rem;
+    font-size: 1.2rem;
+  }
+
+  /* ========== CARDS ========== */
+
+  #cards .wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #cards .card svg {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  #cards .card h4 {
+    font-size: 1.4rem;
+  }
+
+  #cards .card p {
+    font-size: 1.2rem;
+  }
+
+  /* ========== COSTUMERS ========== */
+
+  #costumers .content .costumer {
+    font-size: 1.2rem;
+  }
+
+  #costumers .costumer .costumer-profile img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  #costumers .costumer .costumer-profile {
+    gap: 0.5rem;
+  }
+
+  /* ========== CONTACT ========== */
+
+  #contact .content {
+    font-size: 1.2rem;
+  }
+
+  #contact .content button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+  }
+
+  section#contact .content .col-1 p:nth-child(1) svg {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  section#contact .content svg,
+  section#contact .content img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  /* ========== FOOTER ========== */
+
+  footer .wrapper,
+  footer .wrapper .col-1 {
+    gap: 1rem;
+  }
+
+  footer a {
+    font-size: 2.6rem;
+  }
+
+  footer .social-links svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  footer p,
+  footer p a {
+    font-size: 1.2rem;
+  }
+
+  /* ========== BACK TO TOP BUTTON ========== */
+
+  #backToTopBtn svg {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  /* ========== DARK MODE BUTTON ========== */
+
+  #dark-mode-btn {
+    padding: 0.6rem 0.9rem;
+  }
+
+  #dark-mode-btn i {
+    font-size: 1.3rem;
+  }
+
+  #dark-mode-btn.to-light-mode {
+    padding: 0.6rem;
+  }
+
+  #dark-mode-btn.to-light-mode .fa-sun {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 310px) {
+  /* ========== HOME ========== */
+
+  #home .col h1 {
+    font-size: 2rem;
+  }
+
+  #home .col p {
+    font-size: 1rem;
+  }
+
+  #home .col button {
+    font-size: 1rem;
+  }
+
+  /* ========== PRODUCTS ========== */
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  section header p {
+    font-size: 1rem;
+  }
+
+  /* ========== CARDS ========== */
+
+  #cards .card svg {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  #cards .card h4 {
+    font-size: 1.2rem;
+  }
+
+  #cards .card p {
+    font-size: 1rem;
+  }
+
+  /* ========== COSTUMERS ========== */
+
+  section#costumers .costumer .costumer-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  section#costumers .content .costumer {
+    align-items: center;
+  }
+}
