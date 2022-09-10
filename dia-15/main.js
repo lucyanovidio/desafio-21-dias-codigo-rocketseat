@@ -1,4 +1,4 @@
-const nav = document.querySelector('nav')
+// const nav = document.querySelector('nav')
 const openMenuBtn = document.querySelector('.open-menu')
 const closeMenuBtn = document.querySelector('.close-menu')
 const searchBtn = document.querySelector('.nav-icons #icons #search-icon')
@@ -51,17 +51,17 @@ function closeLogin() {
 function onScroll() {
   // Nav + backToTopBtn
   if (scrollY > 0) {
-    nav.classList.add('scroll-1')
+    document.body.classList.add('scroll-1')
   } else {
-    nav.classList.remove('scroll-1')
+    document.body.classList.remove('scroll-1')
   }
 
   if(scrollY > 300) {
-    nav.classList.remove('scroll-1')
-    nav.classList.add('scroll-2')
+    document.body.classList.remove('scroll-1')
+    document.body.classList.add('scroll-2')
     backToTopBtn.classList.add('active')
   } else {
-    nav.classList.remove('scroll-2')
+    document.body.classList.remove('scroll-2')
     backToTopBtn.classList.remove('active')
   }
 }
@@ -94,7 +94,7 @@ darkModeBtn.addEventListener("click", () => {
 
 ScrollReveal({
   origin: 'left',
-  distance: '50px',
+  distance: '90px',
   duration: 1500
 }).reveal(
   `#home .wrapper .col`
