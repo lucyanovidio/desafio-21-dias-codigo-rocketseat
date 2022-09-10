@@ -94,7 +94,7 @@ darkModeBtn.addEventListener("click", () => {
 
 ScrollReveal({
   origin: 'left',
-  distance: '90px',
+  distance: '50px',
   duration: 1500
 }).reveal(
   `#home .wrapper .col`
