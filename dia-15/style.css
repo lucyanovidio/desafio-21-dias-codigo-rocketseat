@@ -92,13 +92,10 @@ body.scroll-2 nav button:hover {
 
 nav .wrapper {
   padding-block: 2rem;
-  /* pq o wrapper puro já tem padding inline, e só esse q vai precisar de block msm */
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  /* o wrapper do nav aqui n ta alinhado ao centro como o carrossel (ou o contrario, n sei), mas deixei assim */
 }
 
 nav button svg {
@@ -389,8 +386,6 @@ body.login-expanded nav .wrapper .close-menu {
 
 #home .home-wrapper {
   width: 100%;
-  /* min-width: 30rem;
-  max-width: 76.8rem; */
   height: 100%;
 
   position: absolute;
@@ -402,106 +397,12 @@ body.login-expanded nav .wrapper .close-menu {
   transition: 1s;
 }
 
-/* #home .carrossel {
-  width: 50rem;
-  height: 40rem;
-
-  *********!!!*********
-  overflow-x: auto;
-  overflow: hidden;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-
-  display: flex;
-} */
-
 #home .home-wrapper img {
   width: 100%;
-  /* min-width: 50rem;
-  max-width: 70rem; */
   height: 100%;
   object-fit: cover;
   filter: brightness(0.7);
-
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0; */
 }
-
-/* #home .carrossel #img-1 {
-  transform: translateX(0);
-  transition: 700ms;
-}
-
-#home .carrossel #img-2 {
-  visibility: hidden; */
-
-/* height: 39rem;
-  transform: translateX(0);
-  transition: 700ms;
-}
-
-#home .carrossel button {
-  position: absolute;
-  top: 50%; */
-/* transform: translateY(-50%); */
-
-/* antes eu tinha feito como tá aqui acima, dps aprendi que colocando o top e o bottom 0 ele já vai pro meio
-  top: 0;
-  bottom: 0;
-  
-  z-index: 1;
-
-  fill: var(--text-color-2);
-}
-
-#home .carrossel button#right-btn {
-  left: 90%;
-  transition: 300ms;
-
-  ISSO AQUI seria pra fazer um degradê pra dar a impressão de que tem mais coisa pra direita. Nesse caso já tá legal sem isso, mas pra uma galeria de imagem fica legal
-
-  width: 10rem;
-  background: linear-gradient(to right, transparent 0%, black 100%);
-}
-
-#home .carrossel button svg {
-  width: 5rem;
-  height: 5rem;
-}
-
-#home .carrossel button:hover {
-  fill: var(--primary-color);
-}
-
-#home .carrossel button#left-btn {
-  visibility: hidden;
-  opacity: 0;
-  transition: 300ms;
-}
-
-body.img-2 #home .carrossel button#right-btn {
-  visibility: hidden;
-}
-
-body.img-2 #home .carrossel button#left-btn {
-  visibility: visible;
-  opacity: 1;
-}
-
-body.img-2 #home .carrossel #img-2 {
-  transform: translateX(-100%);
-  visibility: visible;
-}
-
-body.img-2 #home .carrossel #img-1 {
-  transform: translateX(-100%);
-  visibility: hidden;
-} */
 
 #home .col {
   height: fit-content;
@@ -539,11 +440,6 @@ body.img-2 #home .carrossel #img-1 {
   border: 0.2rem solid var(--primary-color);
   color: var(--primary-color);
 }
-
-/* body.img-2 #home .col {
-  left: 50%;
-  text-align: right;
-} */
 
 /* ========== PRODUCTS ========== */
 
@@ -627,10 +523,6 @@ section header p {
   margin: 0 0 1rem;
 }
 
-/* #products .product:hover > img {
-  animation: product 800ms forwards;
-} */
-
 #products .product img {
   width: 100%;
   height: 100%;
@@ -643,12 +535,6 @@ section header p {
 #products .product:hover > img {
   filter: brightness(0.9);
 }
-
-/* @keyframes product {
-  to {
-    width: 21rem;
-  }
-} */
 
 #products .product .buttons {
   visibility: hidden;
@@ -1070,8 +956,6 @@ footer p:hover {
 
 /* ========== RESPONSIVE ========== */
 
-/* tem q ver dps o bug do 300px do nav (FAZER 310px) */
-/* no 300px diminui o font size das coisas */
 @media (min-width: 1024px) {
   /* ========== GLOBAL ========== */
 
@@ -1160,16 +1044,6 @@ footer p:hover {
   nav .wrapper .icon:hover {
     fill: var(--primary-color);
   }
-
-
-/* Isso n funciona pq se o nav some, como q o login e o search vão aparecer? 
-
-  body nav.scroll-1 .search,
-  body nav.scroll-1 .login {
-    visibility: visible;
-    opacity: 1;
-    z-index: 100;
-  } */
 
   /* ========== HOME ========== */
 
