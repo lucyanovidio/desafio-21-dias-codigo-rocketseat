@@ -127,6 +127,9 @@ body.scroll-2 nav {
   backdrop-filter: blur(1rem);
   -webkit-backdrop-filter: blur(1rem);
 
+  visibility: visible;
+  opacity: 1;
+
   --text-color-2: #000;
 }
 
