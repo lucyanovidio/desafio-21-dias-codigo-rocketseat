@@ -1,4 +1,3 @@
-// const nav = document.querySelector('nav')
 const openMenuBtn = document.querySelector('.open-menu')
 const closeMenuBtn = document.querySelector('.close-menu')
 const searchBtn = document.querySelector('.nav-icons #icons #search-icon')
@@ -9,12 +8,6 @@ const darkModeBtn = document.querySelector('#dark-mode-btn')
 let productContainer = document.querySelectorAll('.product-container')
 const loadMoreBtn = document.querySelector('button#load-more-btn')
 let currentImg = 4
-
-// Queria fazer o show less mas n consegui
-
-// const loadMoreBtnSpan = document.querySelector('button#load-more-btn span')
-// const arrow1 = document.querySelector('button#load-more-btn #arrow1')
-// const arrow2 = document.querySelector('button#load-more-btn #arrow2')
 
 // == NAV BUTTONS ==
 
@@ -67,8 +60,6 @@ function onScroll() {
 }
 
 // == PRODUCTS - LOAD MORE BTN ==
-
-  // https://www.youtube.com/watch?v=yShTNwyWa_E
 
 loadMoreBtn.addEventListener('click', () => {
   for(let i = currentImg; i < currentImg + 4; i++) {
