@@ -44,17 +44,14 @@ function closeLogin() {
 function onScroll() {
   // Nav + backToTopBtn
   if (scrollY > 0) {
-    document.body.classList.add('scroll-1')
+    document.body.classList.add('scroll')
   } else {
-    document.body.classList.remove('scroll-1')
+    document.body.classList.remove('scroll')
   }
 
   if(scrollY > 300) {
-    document.body.classList.remove('scroll-1')
-    document.body.classList.add('scroll-2')
     backToTopBtn.classList.add('active')
   } else {
-    document.body.classList.remove('scroll-2')
     backToTopBtn.classList.remove('active')
   }
 }
