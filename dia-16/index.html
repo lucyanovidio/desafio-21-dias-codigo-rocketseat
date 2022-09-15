@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Desafio 16</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Arquivo js pra permitir o uso do axios, cliente http que nos ajuda a fazer as requisições http à api swapi -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- o meu arquivo .js tem q ficar embaixo sempre se n n funciona, até por isso q pus só ele com o defer -->
+    <script src="./index.js" defer></script>
+  </head>
+  <body class="">
+
+    <main>
+
+      <div id="box-1">
+        <img src="./assets/logo.png" alt="Logo do Star Wars.">
+        <h1>Descubra qual personagem de Star Wars você seria</h1>
+        <button onclick="randomChar()">Descubra</button>
+      </div>
+      
+      <div id="box-2">
+        <img src="./assets/darth-vader.svg" alt="Desenho da máscara do personagem Darth Vader.">
+      </div>
+      
+      <div id="box-3">
+        <h2>Seu personagem é:</h2>
+        <div class="content">
+          <img id="img" src="" alt="" />
+          <div class="text">
+            <p id="text-1">Nome: <span></span></p>
+            <p id="text-2">Nascimento: <span></span></p>
+            <p id="text-3">Cor do cabelo: <span></span></p>
+            <p id="text-4">Cor dos olhos: <span></span></p>
+            <p id="text-5">Altura: <span></span></p>
+          </div>
+        </div>
+        <button onclick="backToStart()">Voltar</button>
+      </div>
+
+    </main>
+
+    <footer>
+      Powered by
+      <a href="https://github.com/lucyanovidio" title="Github de Lucyan." target="_blank"
+        ><b>Lucyan Ovídio</b></a
+      >.
+    </footer>
+
+    <!-- a partir do exemplo q tem lá no github do feather icons, agt copia e cola, e muda só o nome do data-feather pro q agt quer, de acordo com o nome certinho q aparece no site deles de qnd agt pesquisa -->
+    <!-- ele é tratado e estilizado como se fosse um texto -->
+    <!-- <i data-feather="circle"></i> -->
+
+    <!-- tá no index.js -->
+    <!-- <script>
+      feather.replace()
+    </script> -->
+  </body>
+</html>
