@@ -93,6 +93,11 @@ main input {
   z-index: 1;
 }
 
+main input:focus {
+  outline: none;
+  border: .2rem solid blueviolet;
+}
+
 main input::content {
   text-decoration: none;
 }
