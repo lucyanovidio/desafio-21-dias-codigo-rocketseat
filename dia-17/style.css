@@ -65,16 +65,11 @@ main .teclas {
 }
 
 main p {
-  /* width: 40%;
-  height: 6rem; */
-
   position: absolute;
   z-index: 2;
 
-  /* background-color: rgb(231, 231, 231); */
   background-color: transparent;
-  /* border-radius: 2rem; */
-
+  
   font-size: 2.8rem;
   color: blueviolet;
   font-weight: bold;
