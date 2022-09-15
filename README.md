@@ -27,7 +27,7 @@
 
 + #15 - Desenvolva um site que exiba uma vitrine de produtos de um e-commerce fictício (com nome dos produtos, preços e imagens);  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-15">FEITO</a> ✔️
 + #16 - Desenvolva um site utilizando alguma API pública;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-16">FEITO</a> ✔️
-+ #17 - Desenvolva um site que capture os eventos do teclado e exiba na tela o evento e a tecla pressionada;
++ #17 - Desenvolva um site que capture os eventos do teclado e exiba na tela o evento e a tecla pressionada;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-17">FEITO</a> ✔️
 + #18 - Desenvolva um gerador de senhas aleatórias;
 + #19 - Desenvolva um site que gere imagens aleatórias utilizando a API do Unsplash;
 + #20 - Desenvolva um site de emoji picker. Ao selecionar o emoji, é copiado para área de transferência;
