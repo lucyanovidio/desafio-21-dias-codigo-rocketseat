@@ -42,21 +42,38 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5rem;
+  gap: 7rem;
 }
 
 main h1 {
   width: 60%;
+
   font-size: 4rem;
   text-align: center;
 }
 
-main p {
-  width: 40%;
-  height: 6rem;
+main .teclas {
+  width: 100%;
+  height: fit-content;
 
-  background-color: rgb(231, 231, 231);
-  border-radius: 2rem;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main p {
+  /* width: 40%;
+  height: 6rem; */
+
+  position: absolute;
+  z-index: 2;
+
+  /* background-color: rgb(231, 231, 231); */
+  background-color: transparent;
+  /* border-radius: 2rem; */
 
   font-size: 2.8rem;
   color: blueviolet;
@@ -67,10 +84,56 @@ main p {
   align-items: center;
 }
 
+main input {
+  width: 40%;
+  height: 6rem;
+
+  border: none;
+  border-radius: 2rem;
+  background-color: rgb(231, 231, 231);
+
+  color: transparent;
+
+  position: absolute;
+  z-index: 1;
+}
+
+main input::content {
+  text-decoration: none;
+}
+
+@media (max-width: 500px) {
+  body main h1 {
+    font-size: 3rem;
+  }
+
+  body main p {
+    font-size: 2rem;
+  }
+
+  body footer {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 300px) {
+  body main h1 {
+    font-size: 2rem;
+  }
+
+  body main p {
+    font-size: 1.2rem;
+  }
+}
+
 /* === FOOTER === */
 
 footer {
   font-size: 1.4rem;
+  text-align: center;
+
+  margin-inline: 1rem;
+
   opacity: .5;
   transition: 400ms;
 }
