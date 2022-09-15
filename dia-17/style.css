@@ -95,7 +95,8 @@ main input {
 
 main input:focus {
   outline: none;
-  border: .2rem solid blueviolet;
+  cursor: none;
+  border: .2rem solid red;
 }
 
 main input::content {
