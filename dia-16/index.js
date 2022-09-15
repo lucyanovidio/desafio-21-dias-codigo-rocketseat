@@ -47,7 +47,7 @@ async function showChar(num) {
   // console.log(response)
   
   img.setAttribute('src', `https://starwars-visualguide.com/assets/img/characters/${num}.jpg`)
-  img.setAttribute('alt', `Imagem do personagem ${response.data.name} de Star Wars.`)
+  img.setAttribute('alt', `Character ${response.data.name} from Star Wars.`)
 }
 
 // function preencherContadores() {
