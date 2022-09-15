@@ -93,12 +93,6 @@ main input {
   z-index: 1;
 }
 
-main input:focus {
-  outline: none;
-  cursor: none;
-  border: .2rem solid red;
-}
-
 main input::content {
   text-decoration: none;
 }
