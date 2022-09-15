@@ -94,7 +94,7 @@ main {
 }
 
 #box-1 h1 {
-  width: 90%;
+  width: 80%;
   font-size: 2.5rem;
   text-transform: uppercase;
 }
@@ -110,6 +110,7 @@ button {
   border-radius: 2rem;
 
   background-color: var(--primary-color);
+  border: none;
   transition: 400ms;
 }
 
