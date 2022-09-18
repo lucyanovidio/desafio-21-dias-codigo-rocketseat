@@ -6,14 +6,10 @@ const symbolsCheckbox = document.querySelector('#symbols')
 const copyBtn = document.querySelector('#copy-btn')
 const generateBtn = document.querySelector('#generate-btn')
 
-// Caracteres a serem utilizados 
-
 const upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const lowerLetters = "abcdefgijklmnopqrstuvwxyz"
 const numbers = "0123456789"
 const symbols = "'!@#$%¨&*()_-=+{}[]~^`"
-
-// Funções para obter um caracter aleatório de cada variável de caracteres
 
 function getUppercaseChar() {
   return upperLetters[Math.floor(Math.random() * upperLetters.length)]
@@ -31,12 +27,8 @@ function getSymbolChar() {
   return symbols[Math.floor(Math.random() * symbols.length)]
 }
 
-// Função principal para gerar senha
-
 function generatePassword() {
   let password = ""
-
-  // Adicionando o caracter do respectivo checkbox se ele estiver checked
 
   if(uppercaseCheckbox.checked) {
     password += getUppercaseChar()
@@ -54,19 +46,13 @@ function generatePassword() {
     password += getSymbolChar()
   }
 
-  // Definindo tamanho da senha e que os caracteres serão adicionados na senha aleatóriamente até esse tamanho máximo
-
   for(let i = password.length; i < 15; i++) {
     const x = generateX()
     password += x
   }
 
-  // Escrevendo a senha na caixa
-
   passwordBox.innerHTML = password
 } 
-
-// ME PERDI QND ELE TROUXE ESSA FUNÇÃO AQUI
 
 function generateX() {
   const xs = []
@@ -93,8 +79,6 @@ function generateX() {
 }
 
 generateBtn.addEventListener("click", generatePassword)
-
-// Botão de copiar
 
 copyBtn.addEventListener("click", async () => {
   if(!passwordBox.innerHTML) {
