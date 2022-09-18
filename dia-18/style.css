@@ -1,0 +1,245 @@
+/* == GLOBAL == */
+
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+
+  background-color: rgb(12, 12, 12);
+  font-size: 1.6rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7rem;
+}
+
+/* === MAIN === */
+
+main {
+  width: 80%;
+  max-width: 50rem;
+  height: fit-content;
+
+  background-color: rgb(31, 31, 31);
+  border-radius: 2rem;
+  padding: 3rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+main header {
+  width: 100%;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+main h1 {
+  width: 80%;
+
+  padding-bottom: 2rem;
+  border-bottom: .1rem solid grey;
+
+  font-size: 3rem;
+  text-align: center;
+}
+
+main #senha {
+  width: 80%;
+  height: 5rem;
+
+  font-size: 2.5rem;
+  color: rgb(1, 255, 1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 3rem;
+}
+
+main .checkbox-container {
+  width: 80%;
+  margin-bottom: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+main .checkbox-container .checkbox-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 1.8rem;
+}
+
+main .check-btn {
+  display: flex;
+}
+
+main .check-btn label {
+  width: 5rem;
+  height: 3rem;
+
+  position: relative;
+
+  background-color: grey;
+  border-radius: 2rem;
+}
+
+main .check-btn label:hover {
+  cursor: pointer;
+}
+
+main .check-btn input {
+  opacity: 0;
+}
+
+main .check-btn label .slider {
+  width: 2rem;
+  height: 2rem;
+
+  position: absolute;
+  top: .5rem;
+  left: .3rem;
+
+  background-color: #fff;
+  border-radius: 50%;
+
+  transform: translateX(0);
+  transition: 300ms;
+}
+
+main .check-btn input:checked + label .slider {
+  transform: translateX(2.4rem);
+}
+
+main .check-btn input:checked + label {
+  background-color: blueviolet;
+}
+
+main .buttons {
+  display: flex;
+  gap: 3rem;
+}
+
+main .buttons button {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: none;
+
+  background-color: blueviolet;
+  font-size: 1.6rem;
+  font-weight: bold;
+
+  transition: 300ms;
+}
+
+main .buttons button:hover {
+  filter: brightness(.7);
+  cursor: pointer;
+}
+
+/* == FOOTER == */
+
+footer {
+  font-size: 1.4rem;
+  opacity: .6;
+  transition: 300ms;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* == RESPONSIVO == */
+
+@media (max-width: 400px) {
+  main h1 {
+    font-size: 2rem;
+  }
+
+  main #senha {
+    height: 2.5rem;
+    font-size: 1.6rem;
+  }
+
+  main .checkbox-container .checkbox-wrapper {
+    font-size: 1.4rem;
+  }
+
+  main .check-btn label {
+    width: 4rem;
+    height: 2rem;
+  }  
+
+  main .check-btn label .slider {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  main .buttons {
+    gap: 1rem;
+  }  
+
+  main .buttons button {
+    padding: .8rem 1.5rem;
+  
+    background-color: blueviolet;
+    font-size: 1.4rem;
+    font-weight: bold;
+  
+    transition: 300ms;
+  }
+
+  footer {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 300px) {
+  main .checkbox-container .checkbox-wrapper {
+    flex-direction: column;
+    gap: 1rem;
+
+    text-align: center;
+  }
+}
+
+@media (max-width: 250px) {
+  main .buttons {
+    flex-direction: column;
+  }
+}

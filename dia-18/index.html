@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Desafio 18</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    
+    <main>
+      <header>
+        <h1>Gere sua senha aleatória</h1>
+        <span id="senha"></span>
+      </header>
+      <div class="checkbox-container">
+        <div class="checkbox-wrapper">
+          <p for="uppercase">Letras maiúsculas</p>
+          <div class="check-btn">
+            <input type="checkbox" id="uppercase" />
+            <label for="uppercase">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="checkbox-wrapper">
+          <p for="lowercase">Letras minúsculas</p>
+          <div class="check-btn">
+            <input type="checkbox" id="lowercase" />
+            <label for="lowercase">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="checkbox-wrapper">
+          <p for="number">Números</p>
+          <div class="check-btn">
+            <input type="checkbox" id="numbers" />
+            <label for="numbers">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="checkbox-wrapper">
+          <p for="symbols">Caracteres especiais</p>
+          <div class="check-btn">
+            <input type="checkbox" id="symbols" />
+            <label for="symbols">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="copy-btn">Copiar</button>
+        <button id="generate-btn">Gerar senha</button>
+      </div>
+    </main>
+
+    <footer>
+      Powered by
+      <a href="https://github.com/lucyanovidio" title="Github de Lucyan." target="_blank"
+        ><b>Lucyan Ovídio</b></a
+      >.
+    </footer>
+
+  </body>
+</html>
