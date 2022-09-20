@@ -21,7 +21,6 @@ body {
   min-height: 100vh;
 
   background-color: rgb(233, 233, 233);
-  /* background-color: rgb(24, 24, 24); */
 
   font-size: 1.6rem;
 }
@@ -143,6 +142,8 @@ footer a {
 footer:hover {
   opacity: 1;
 }
+
+/* == RESPONSIVE == */
 
 @media (max-width: 768px) {
   main {
