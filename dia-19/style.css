@@ -146,21 +146,21 @@ footer:hover {
 /* == RESPONSIVE == */
 
 @media (max-width: 768px) {
-  main {
+  main .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  main img {
+  main .grid img {
     height: 30rem;
   }
 }
 
 @media (max-width: 500px) {
-  main {
+  main .grid {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  main img {
+  main .grid img {
     height: 40rem;
   }
 }
