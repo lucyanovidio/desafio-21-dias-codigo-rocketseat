@@ -14,7 +14,6 @@ input.addEventListener('keydown', (e) => {
 window.addEventListener('load', async () => {
   const response = await unsplashGet('nature')
   const images = []
-  console.log(response)
 
   for (let i = 0; i < 9; i++) {
     images[i] = document.createElement('img')
@@ -32,7 +31,6 @@ async function imgSearch() {
   removeImages()
 
   const response = await unsplashGet(input.value)
-
   const images = []
 
   for (let i = 0; i < 9; i++) {
@@ -56,7 +54,6 @@ function removeImages() {
 
 async function loadMore() {
   const response = await unsplashGet(input.value)
-
   const images = []
 
   for (let i = currentImgs; i < currentImgs + 9; i++) {
