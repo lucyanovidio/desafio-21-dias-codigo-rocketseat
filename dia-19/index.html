@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Desafio 16</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    
+    <header>
+      <h1>Unsplash images</h1>
+      <div class="search">
+        <input id="input" type="text" placeholder="Search" />
+        <i id="btn" onclick='imgSearch()' data-feather="search"></i>
+      </div>
+    </header>
+
+    <main>
+      <div class="grid">
+        <!-- <img width="200px"/>
+        <img width="200px"/>
+        <img width="200px"/>
+        <img width="200px"/>
+        <img width="200px"/> -->
+      </div>
+      <button  id="load-more-btn" onclick="loadMore()">Load more</button>
+    </main>
+
+    <footer>
+      Powered by
+      <a href="https://github.com/lucyanovidio" title="Github de Lucyan." target="_blank"
+        ><b>Lucyan Ovídio</b></a
+      >.
+    </footer>
+
+  </body>
+</html>

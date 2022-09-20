@@ -1,0 +1,177 @@
+/* == GLOBAL == */
+
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Roboto', sans-serif;
+  color: #000;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+
+  background-color: rgb(233, 233, 233);
+  /* background-color: rgb(24, 24, 24); */
+
+  font-size: 1.6rem;
+}
+
+/* === HEADER === */
+
+header {
+  width: 100%;
+  height: 18rem;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header .search {
+  width: 80%;
+  max-width: 60rem;
+
+  margin-top: 2rem;
+  position: relative;
+
+  color: #000;
+  transition: 300ms;
+}
+
+input {
+  width: 100%;
+  padding: 1rem 4rem 1rem 2rem;
+  
+  outline: none;
+  border: .1rem solid #000;
+  border-radius: 2rem;
+  
+  color: #000;
+}
+
+header #btn {
+  position: absolute;
+  top: 16%;
+  right: 2%;
+}
+
+header #btn:hover {
+  cursor: pointer;
+}
+
+/* == MAIN == */
+
+main {
+  width: 90%;
+  max-width: 102.4rem;
+  padding-block: 3rem;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+main .grid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+main h1 {
+  font-size: 3rem;
+}
+
+main img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 1rem;
+}
+
+#load-more-btn {
+  padding: 2rem 2.8rem;
+  margin-top: 3rem;
+
+  font-size: 1.6rem;
+  color: #fff;
+
+  background-color: #000;
+  border: none;
+  border-radius: 1rem;
+
+  display: none;
+}
+
+#load-more-btn:hover {
+  cursor: pointer;
+}
+
+/* == FOOTER == */
+
+footer {
+  width: 100%;
+  padding: 4rem 2rem;
+
+  font-size: 1.4rem;
+  text-align: center;
+
+  opacity: .5;
+  transition: 300ms;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  main img {
+    height: 30rem;
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  main img {
+    height: 40rem;
+  }
+}
+
+@media (max-width: 400px) {
+  header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  header .search  #btn {
+    width: 2rem;
+    right: 4%;
+  }
+}
