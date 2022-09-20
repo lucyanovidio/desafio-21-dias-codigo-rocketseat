@@ -5,8 +5,6 @@ const lm_btn = document.querySelector('#load-more-btn')
 
 let currentImgs = 0
 
-btn.addEventListener('click', () => imgSearch)
-
 input.addEventListener('keydown', (e) => {
   if(e.key === 'Enter') {
     imgSearch()
@@ -35,8 +33,6 @@ async function imgSearch() {
 
   const response = await unsplashGet(input.value)
 
-  console.log(response)
-
   const images = []
 
   for (let i = 0; i < 9; i++) {
@@ -48,10 +44,9 @@ async function imgSearch() {
       images[i].setAttribute('alt', response.data.results[i].alt_description)
     }
     mainGrid.appendChild(images[i])
-    console.log(currentImgs)
   }
   currentImgs += 9
-  console.log('final: ' + currentImgs)
+  
   lm_btn.style.display = 'initial'
 }
 
@@ -73,15 +68,12 @@ async function loadMore() {
       images[i].setAttribute('alt', response.data.results[i].alt_description)
     }
     mainGrid.appendChild(images[i])
-    console.log(currentImgs)
   }
   currentImgs += 9
 
   if (currentImgs >= response.data.results.length) {
     lm_btn.style.display = 'none'
   }
-
-  console.log('final: ' + currentImgs)
 }
 
 function unsplashGet(param) {
