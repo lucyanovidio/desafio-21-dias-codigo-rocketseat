@@ -112,12 +112,18 @@ body div.emoji-picker .emoji-picker__content .emoji-picker__emojis {
   height: 15.5rem;
 }
 
-body div.emoji-picker .emoji-picker__content .emoji-picker__emojis .emoji-picker__emoji {
+body div.emoji-picker .emoji-picker__content .emoji-picker__emojis .emoji-picker__emoji,
+body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__emoji {
   font-size: 2rem;
 }
 
 body div.emoji-picker .emoji-picker__preview {
   height: 5.5rem;
+}
+
+body div.emoji-picker .emoji-picker__variant-overlay {
+  width: 100%;
+  height: 100%;
 }
 
 /* == FOOTER == */
@@ -157,6 +163,11 @@ footer:hover {
   body div.emoji-picker .emoji-picker__content .emoji-picker__emojis {
     width: calc(1rem * 1.5 * 10);
     height: 11rem;
+  }
+  
+  body div.emoji-picker .emoji-picker__variant-overlay .emoji-picker__variant-popup {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
