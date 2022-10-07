@@ -31,6 +31,6 @@
 + #18 - Desenvolva um gerador de senhas aleatórias;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-18">FEITO</a> ✔️
 + #19 - Desenvolva um site que gere imagens aleatórias utilizando a API do Unsplash;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-19">FEITO</a> ✔️
 + #20 - Desenvolva um site de emoji picker. Ao selecionar o emoji, é copiado para área de transferência;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-20">FEITO</a> ✔️
-+ #21 - Desenvolva uma página para ser seu portifólio.
++ #21 - Desenvolva uma página para ser seu portifólio. <a href="https://lucyanovidio.vercel.app">FEITO</a> ✔️
 
 #21diasdecodigo #rocketseat #soumarmiteiro
