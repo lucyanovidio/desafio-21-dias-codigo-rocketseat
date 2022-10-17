@@ -1,4 +1,4 @@
-// PEGANDO
+// PEGANDO OS ELEMENTOS HTML
 
 // Caixas pra mudar de tela
 const box1 = document.querySelector('section#box-1')
