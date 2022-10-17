@@ -1,5 +1,15 @@
 /* == GLOBAL == */
 
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
 :root {
   --gradient: linear-gradient(180deg, blueviolet 45%, rgb(11, 11, 141) 100%);
   --gradient-2: linear-gradient(180deg, rgb(11, 11, 141) 45%, blueviolet 100%);
@@ -9,16 +19,6 @@
   --input-color: rgba(0, 0, 0, .8);
   --font-family: 'Roboto', sans-serif;
   font-size: 62.5%;
-}
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-  color: var(--text-color);
-  font-family: var(--font-family);
 }
 
 body {
@@ -79,7 +79,6 @@ main h1 {
 
 fieldset {
   border: none;
-  /* height: 100%; */
   padding: 3rem 5rem 0;
 
   display: flex;
@@ -200,9 +199,7 @@ footer:hover {
     grid-template-areas: 
     'A' 
     'B';
-    /* agr são duas linhas, com o msm tamanho */
     grid-template-rows: 30% 70%;
-    /* e uma coluna só, pegando 100% de width */
     grid-template-columns: 100%;
   }
 
@@ -223,9 +220,7 @@ footer:hover {
     grid-template-areas: 
     'A' 
     'B';
-    /* agr são duas linhas, com o msm tamanho */
     grid-template-rows: 30% 70%;
-    /* e uma coluna só, pegando 100% de width */
     grid-template-columns: 100%;
   }
 
