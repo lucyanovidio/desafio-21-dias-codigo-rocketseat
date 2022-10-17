@@ -7,6 +7,7 @@
     <title>Desafio 3</title>
 
     <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" defer></script>
   </head>
   <body>
     <img src="https://stories.cnnbrasil.com.br/wp-content/uploads/sites/9/2021/06/giphy-54.gif" alt="Gif de um foguete decolando.">
@@ -32,24 +33,4 @@
         ><b>Lucyan Ovídio</b></a
       >.
     </footer>
-
-    <script>
-      window.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-          button()
-        } else if (e.keyCode === 27) {
-          // keyCode 27 = ESC
-          document.body.classList.remove('rocket')
-        }
-      })
-
-      function button() {
-        document.body.classList.add('rocket')
-
-        setTimeout(function () {
-          document.body.classList.remove('rocket')
-        }, 10000)
-      }
-    </script>
-  </body>
 </html>
