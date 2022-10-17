@@ -7,9 +7,10 @@
     <title>Desafio 3</title>
 
     <link rel="stylesheet" href="./style.css" />
-    <script type="text/javascript" src="./main.js" defer></script>
   </head>
   <body>
+    <img src="https://stories.cnnbrasil.com.br/wp-content/uploads/sites/9/2021/06/giphy-54.gif" alt="Gif de um foguete decolando.">
+
     <button onclick="button()">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -24,8 +25,28 @@
         />
       </svg>
     </button>
+
     <footer>
-      Powered by <a href="https://github.com/lucyanovidio" target="_blank"><b>Lucyan Ovídio</b></a>.
+      Powered by
+      <a href="https://github.com/lucyanovidio" target="_blank"
+        ><b>Lucyan Ovídio</b></a
+      >.
     </footer>
+
+    <script>
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          button()
+        } 
+      })
+
+      function button() {
+        document.body.classList.add('rocket')
+
+        setTimeout(function () {
+          document.body.classList.remove('rocket')
+        }, 10000)
+      }
+    </script>
   </body>
 </html>
