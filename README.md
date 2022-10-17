@@ -1,7 +1,26 @@
-# Desafio de 21 dias de código
-### Desafio por <a href="https://www.instagram.com/p/ChTBg1BpLGU/?utm_source=ig_web_copy_link" target="_blank">Rocketseat</a> 🚀
+# Desafio de 21 dias de código 🚀
 
-#### Dias:
+## 🤔 O que é?
+
+Desafio proposto pela <a href="https://rocketseat.com.br">Rocketseat</a> com 21 projetos para serem desenvolvidos em 21 dias, cada um em um dia, no propósito de estimular a prática diária de estudos de programação.
+
+***Os desafios foram divididos em 3 partes, estando o enunciado de cada disponíveis nos links abaixo:***
+<br>
++ <a href="https://www.instagram.com/p/ChTBg1BpLGU/?utm_source=ig_web_copy_link">Parte 1</a>
++ <a href="https://www.instagram.com/p/ChkahuNOLvF/?utm_source=ig_web_copy_link">Parte 2</a>
++ <a href="https://www.instagram.com/p/Ch3EOQ0p2sZ/?utm_source=ig_web_copy_link">Parte 3</a>
+
+> Fique a vontade e participe também! 🤙🏾
+
+## 👩🏾‍💻 Tecnologias que utilizei:
+
+<div>
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+</div>
+
+## 💻 Seguem os desafios e os links para os resultados:
 
 > #### Parte 1
 
@@ -33,4 +52,5 @@
 + #20 - Desenvolva um site de emoji picker. Ao selecionar o emoji, é copiado para área de transferência;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-20">FEITO</a> ✔️
 + #21 - Desenvolva uma página para ser seu portifólio. <a href="https://lucyanovidio.vercel.app">FEITO</a> ✔️
 
+<br>
 #21diasdecodigo #rocketseat #soumarmiteiro
