@@ -1,7 +1,4 @@
 /* == GLOBAL == */
-:root {
-  font-size: 62.5%;
-}
 
 /* Reset */
 * {
@@ -10,6 +7,10 @@
   box-sizing: border-box;
 
   font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
 }
 
 body {
