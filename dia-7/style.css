@@ -1,10 +1,5 @@
 /* == GLOBAL == */
 
-:root {
-  font-size: 62.5%;
-}
-
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +7,10 @@
 
   font-family: 'Open Sans', sans-serif;
   color: white;
+}
+
+:root {
+  font-size: 62.5%;
 }
 
 body {
