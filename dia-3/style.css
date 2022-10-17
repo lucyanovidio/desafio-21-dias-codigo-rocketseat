@@ -1,5 +1,3 @@
-/* uma duvidazinha: eu posso fazer um elemento andar pro lado com o translate e tbm adicionando margin, por exemplo. Quando esses elementos que podem ser usados pras mesmas coisas se diferenciam no uso? */
-
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +14,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 400ms;
 }
 
 button {
@@ -82,10 +94,9 @@ footer:hover {
   opacity: 1;
 }
 
-body.rocket {
-  background-image: url(https://stories.cnnbrasil.com.br/wp-content/uploads/sites/9/2021/06/giphy-54.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
+body.rocket img {
+  opacity: 1;
+  visibility: visible;
 }
 
 body.rocket button {
