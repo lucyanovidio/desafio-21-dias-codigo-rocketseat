@@ -24,7 +24,7 @@ Desafio proposto pela <a href="https://rocketseat.com.br">Rocketseat</a> com 21 
 
 > #### Parte 1
 
-+ #1 - Criar um repositório no Github para por os 21 desafios de cada dia;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-1">FEITO</a> ✔️
++ #1 - Criar um repositório no Github para por os 21 desafios de cada dia;  <a href="https://github.com/lucyanovidio/desafio-21-dias-codigo-rocketseat">FEITO</a> ✔️
 + #2 - Faça um Hello World customizado com fonte, cor e imagens;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-2">FEITO</a> ✔️
 + #3 - Crie um botão animado;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-3">FEITO</a> ✔️
 + #4 - Crie uma calculadora;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-4">FEITO</a> ✔️
@@ -52,5 +52,17 @@ Desafio proposto pela <a href="https://rocketseat.com.br">Rocketseat</a> com 21 
 + #20 - Desenvolva um site de emoji picker. Ao selecionar o emoji, é copiado para área de transferência;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-20">FEITO</a> ✔️
 + #21 - Desenvolva uma página para ser seu portifólio. <a href="https://lucyanovidio.vercel.app">FEITO</a> ✔️
 
-<br>
+---
+
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/lucyanovidio.png" width="100px" />
+    </td>
+    <td>
+      Feito por <a href="https://github.com/lucyanovidio">Lucyan Ovídio.</a> 🙋🏿‍♂️
+    </td>
+  </tr>
+</table>
+
 #21diasdecodigo #rocketseat #soumarmiteiro
