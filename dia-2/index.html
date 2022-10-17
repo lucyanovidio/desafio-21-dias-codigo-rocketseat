@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Desafio 2</title>
+    <title>Desafio 2</title>
 
-  <link rel="stylesheet" href="./style.css" />
-  <script type="text/javascript" src="./main.js"></script>
-</head>
-<body>
-  
-  <div class="container">
-    <button onclick="helloWorld()">
-      👋
-    </button>
-  
-    <h1>Hello World</h1>
-  </div>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button onclick="helloWorld()">👋</button>
 
-  <p>Powered by <a href="#"><b>Lucyan Ovídio.</b></a></p>
+      <h1>Hello World</h1>
+    </div>
 
-</body>
+    <footer>
+      Powered by
+      <a href="https://github.com/lucyanovidio" target="_blank"
+        ><b>Lucyan Ovídio.</b></a
+      >
+    </footer>
+
+    <script>
+      function helloWorld() {
+        document.body.classList.add('hello-world')
+
+        setTimeout(function () {
+          document.body.classList.remove('hello-world')
+        }, 5000)
+      }
+    </script>
+  </body>
 </html>
