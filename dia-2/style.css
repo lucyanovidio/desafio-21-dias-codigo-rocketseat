@@ -12,8 +12,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 50px;
 
-  background: white;
+  background: rgb(226, 226, 226);
 
   font-family: 'Open Sans', sans-serif;
 }
@@ -21,12 +22,13 @@ body {
 .container {
   position: relative;
   width: 100vw;
+  height: 120px;
+
+  overflow: hidden;
 
   display: flex;
   justify-content: center;
   align-items: center;
-
-  margin-bottom: 50px;
 }
 
 button {
@@ -46,18 +48,12 @@ button {
 
 @keyframes main {
   50% {
-    top: 0px;
-    left: 0px;
     background: violet;
   }
   25% {
-    top: 0px;
-    left: 0px;
     background: white;
   }
   25% {
-    top: 0px;
-    left: 0px;
     background: #2e2ed6;
   }
 }
@@ -74,27 +70,32 @@ button:hover {
 h1 {
   position: absolute;
   right: 0;
+  margin-inline: 10px;
 
   font-size: 100px;
+  text-align: center;
 
-  transform: translateX(100%);
+  transform: translateX(110%);
   transition: 500ms;
 }
 
-p {
+footer {
   font-size: 14px;
-  color: grey;
+  color: black;
+  text-align: center;
+
   opacity: 0.6;
+  margin-inline: 10px;
 
   transition: 400ms;
 }
 
 a {
   text-decoration: none;
-  color: grey;
+  color: black;
 }
 
-body p:hover {
+body footer:hover {
   opacity: 1;
 }
 
@@ -109,7 +110,56 @@ body.hello-world h1 {
   transform: translateX(0);
 }
 
-body.hello-world p {
-  margin-top: 50px;
+@media (max-width: 700px) {
+  button {
+    width: 80px;
+    height: 80px;
+    
+    font-size: 40px;
+  }
+  
+  button:hover {
+    width: 90px;
+    height: 90px;
+  
+    font-size: 45px;
+  }
+
+  h1 {
+    font-size: 80px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
 }
 
+@media (max-width: 500px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  footer {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 370px) {
+  button {
+    width: 60px;
+    height: 60px;
+    
+    font-size: 30px;
+  }
+  
+  button:hover {
+    width: 70px;
+    height: 70px;
+  
+    font-size: 35px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+}
