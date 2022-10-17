@@ -12,7 +12,7 @@ Desafio proposto pela <a href="https://rocketseat.com.br">Rocketseat</a> com 21 
 
 > Fique a vontade e participe também! 🤙🏾
 
-## 👩🏾‍💻 Tecnologias que utilizei:
+## 🧠 Tecnologias utilizadas:
 
 <div>
     <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
