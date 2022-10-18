@@ -4,7 +4,7 @@
 
 Desafio proposto pela <a href="https://rocketseat.com.br">Rocketseat</a> com 21 projetos para serem desenvolvidos em 21 dias, cada um em um dia, no propósito de estimular a prática diária de estudos de programação.
 
-***Os desafios foram divididos em 3 partes, estando o enunciado de cada um disponíveis nos links abaixo:***
+***Os desafios foram divididos em 3 partes, estando disponíveis no Instagram da Rocketseat, e acessíveis pelos links abaixo:***
 <br>
 + <a href="https://www.instagram.com/p/ChTBg1BpLGU/?utm_source=ig_web_copy_link">Parte 1</a>
 + <a href="https://www.instagram.com/p/ChkahuNOLvF/?utm_source=ig_web_copy_link">Parte 2</a>
