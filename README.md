@@ -22,7 +22,7 @@ Desafio proposto pela <a href="https://rocketseat.com.br">Rocketseat</a> com 21 
 
 ## 💻 Seguem os desafios e os links para os resultados:
 
-> #### Parte 1
+### Parte 1
 
 + #1 - Criar um repositório no Github para por os 21 desafios de cada dia;  <a href="https://github.com/lucyanovidio/desafio-21-dias-codigo-rocketseat">FEITO</a> ✔️
 + #2 - Faça um Hello World customizado com fonte, cor e imagens;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-2">FEITO</a> ✔️
@@ -32,7 +32,7 @@ Desafio proposto pela <a href="https://rocketseat.com.br">Rocketseat</a> com 21 
 + #6 - Crie um card com o efeito Glassmorphism;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-6">FEITO</a> ✔️
 + #7 - Desenvolva um contador.  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-7">FEITO</a> ✔️
 
-> #### Parte 2
+### Parte 2
 
 + #8 - Desenvolva um toggle que altere o tema para claro e escuro;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-8">FEITO</a> ✔️
 + #9 - Crie uma animação de loading;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-9">FEITO</a> ✔️
@@ -42,7 +42,7 @@ Desafio proposto pela <a href="https://rocketseat.com.br">Rocketseat</a> com 21 
 + #13 - Desenvolva um menu responsivo;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-13">FEITO</a> ✔️
 + #14 - Crie um formulário de quizzes;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-14">FEITO</a> ✔️
 
-> #### Parte 3
+### Parte 3
 
 + #15 - Desenvolva um site que exiba uma vitrine de produtos de um e-commerce fictício (com nome dos produtos, preços e imagens);  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-15">FEITO</a> ✔️
 + #16 - Desenvolva um site utilizando alguma API pública;  <a href="https://lucyanovidio.github.io/desafio-21-dias-codigo-rocketseat/dia-16">FEITO</a> ✔️
